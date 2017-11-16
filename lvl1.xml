@@ -1,0 +1,36 @@
+<scene id="000">
+    <id>000</id>
+    <back>null</back>
+    <front>002</front>
+    <left>001</left>
+    <right>003</right>
+    <img>000.png</img>
+    <puzzle>null</puzzle>
+</scene>
+<scene id="001">
+    <id>001</id>
+    <back>000</back>
+    <front>null</front>
+    <left>null</left>
+    <right>null</right>
+    <img>001.png</img>
+    <puzzle>null</puzzle>
+</scene>
+<scene id="002">
+    <id>002</id>
+    <back>000</back>
+    <front>null</front>
+    <left>null</left>
+    <right>null</right>
+    <img>002.png</img>
+    <puzzle>null</puzzle>
+</scene>
+<scene id="003">
+    <id>003</id>
+    <back>000</back>
+    <front>null</front>
+    <left>null</left>
+    <right>null</right>
+    <img>003.png</img>
+    <puzzle>null</puzzle>
+</scene>

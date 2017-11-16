@@ -37,6 +37,7 @@ $(function() {
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), false);
                     ponerVisible($("#menulvl1"), true);
+                    play1(000);
                 
 				})
         $("#Blvl2").click(
@@ -71,3 +72,21 @@ $(function() {
 
     
 })
+function play1(scene){
+    load(scene);
+    
+    
+}
+function load(scene){
+    var text, parser, xmlDoc;
+    
+    
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(text,"text/xml");
+
+    text = xmlDoc.getElementById(""+scene);
+    console.log(text);
+    
+    
+    
+}
