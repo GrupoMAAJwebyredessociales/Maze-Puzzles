@@ -29,6 +29,21 @@ $(function() {
 			function() {
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), true);
+                    ponerVisible($("#menuJugar"), true);
+                
+				})
+        $("#Blvl1").click(
+			function() {
+                    ponerVisible($("#menu"), false);
+                    ponerVisible($("#menuJugar"), false);
+                    ponerVisible($("#menulvl1"), true);
+                
+				})
+        $("#Blvl2").click(
+			function() {
+                    ponerVisible($("#menu"), false);
+                    ponerVisible($("#menuJugar"), false);
+                    ponerVisible($("#menulvl2"), true);
                 
 				})
     $("#Binstrucciones").click(
