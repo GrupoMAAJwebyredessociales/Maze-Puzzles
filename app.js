@@ -88,7 +88,7 @@ function load(scene){
     xmlDoc = parser.parseFromString(txt1,"text/xml");
     
     text = xmlDoc.getElementsByTagName("scene").item(scene);
-    //console.log(text);
+    console.log(text);
     
     var img = text.getElementsByTagName("img")[0].innerHTML;
     var back = text.getElementsByTagName("back")[0].innerHTML;
