@@ -1,6 +1,6 @@
 // función que permite poner visible o no una sección div, asi conseguimos que
 // la tabla se oculte cuando inciamos partida
-var victoria;
+
 function ponerVisible(div, visible) {
 	let
 	estado = visible ? "block" : "none"; // block para que se vea, o none
@@ -73,19 +73,23 @@ $(function() {
 
     
 })
+var victoria;
+var xmlDoc;
+var parser;
+
 function play1(scene){
+    victoria = false;
+    
+    parser = new DOMParser();
+    xmlDoc = parser.parseFromString(txt1,"text/xml");
+    
     load(scene);
     victoria = false;
     
 }
 
 function load(scene){
-    var text, parser, xmlDoc;
-    
-    
-    
-    parser = new DOMParser();
-    xmlDoc = parser.parseFromString(txt1,"text/xml");
+    var text;
     
     text = xmlDoc.getElementsByTagName("scene").item(scene);
     console.log(text);
