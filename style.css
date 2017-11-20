@@ -38,10 +38,26 @@ span.crosshair {
 }
 
 #bBack{
+
+}
+
+#bLeft{
   position:absolute;  
   z-index:1;  
-  left:125px;  
-  top:125px;
+  left:25%;  
+  top:25%;
+}
+#bRight{
+  position:absolute;  
+  z-index:1;  
+  left:50%;  
+  top:25%;
+}
+#bFront{
+  position:absolute;  
+  z-index:1;  
+  left:500px;  
+  top:200px;
 }
 
 
