@@ -99,7 +99,9 @@ function load(scene){
     var left = text.getElementsByTagName("left")[0].innerHTML;
     var front = text.getElementsByTagName("front")[0].innerHTML;
     var right = text.getElementsByTagName("right")[0].innerHTML;
-    console.log(img);
+    
+    /*console.log(img);*/
+    
     document.getElementById("background").src = "assets/lvl1/"+img;
     $("#bBack").click(
 			function() {
