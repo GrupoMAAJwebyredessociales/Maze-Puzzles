@@ -23,10 +23,27 @@ span.crosshair {
 }
 
 .page{
-	margin:auto;
 	text-align:center;
-	display:none;
+  display:none;
+
 }
+
+.fondo{
+    display:block;
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+    z-index: auto;
+}
+
+#bBack{
+  position:absolute;  
+  z-index:1;  
+  left:125px;  
+  top:125px;
+}
+
 
 /* BOTONES */
 .botonJugar {
