@@ -111,8 +111,8 @@ function play1(scene){
     victoria = false;
     
     parser = new DOMParser();
-   //xmlDoc = parser.parseFromString(txt1,"text/xml");
     xmlDoc = parser.parseFromString(txt1,"text/xml");
+    
     load(scene);
     victoria = false;
     
@@ -137,38 +137,6 @@ function load(scene){
     /*console.log(img);*/
     
     document.getElementById("background").src = "assets/lvl1/"+img;
-<<<<<<< HEAD
-   
-=======
-    $("#bBack").click(
-			function() {
-                    if(back!=null){
-                        load(back);
-                        console.log(back);
-                    }
-				});
-    $("#bFront").click(
-			function() {
-                    if(front!=null){
-                        load(front);
-                        console.log(front);
-                    }
-				});
-    $("#bLeft").click(
-			function() {
-                    if(left!=null){
-                        load(left);
-                        console.log(left);
-                    }
-				});
-    $("#bRight").click(
-			function() {
-                    if(right!=null){
-                        load(right);
-                        console.log(right);
-                    }
-				});
->>>>>>> a96cbe9376d049aec1a4ece492f0d3d485c4dc57
     
     
 }
