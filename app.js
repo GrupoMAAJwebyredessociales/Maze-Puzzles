@@ -39,6 +39,7 @@ $(function() {
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), true);
                     ponerVisible($("#menuJugar"), true);
+                console.log("hola");
                 
 				})
         $("#Blvl1").click(
@@ -46,6 +47,7 @@ $(function() {
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), false);
                     ponerVisible($("#menulvl1"), true);
+                console.log("hola");
                     play1(000);
                 
 				})
@@ -109,8 +111,8 @@ function play1(scene){
     victoria = false;
     
     parser = new DOMParser();
+   //xmlDoc = parser.parseFromString(txt1,"text/xml");
     xmlDoc = parser.parseFromString(txt1,"text/xml");
-    
     load(scene);
     victoria = false;
     
@@ -135,12 +137,46 @@ function load(scene){
     /*console.log(img);*/
     
     document.getElementById("background").src = "assets/lvl1/"+img;
+<<<<<<< HEAD
    
+=======
+    $("#bBack").click(
+			function() {
+                    if(back!=null){
+                        load(back);
+                        console.log(back);
+                    }
+				});
+    $("#bFront").click(
+			function() {
+                    if(front!=null){
+                        load(front);
+                        console.log(front);
+                    }
+				});
+    $("#bLeft").click(
+			function() {
+                    if(left!=null){
+                        load(left);
+                        console.log(left);
+                    }
+				});
+    $("#bRight").click(
+			function() {
+                    if(right!=null){
+                        load(right);
+                        console.log(right);
+                    }
+				});
+>>>>>>> a96cbe9376d049aec1a4ece492f0d3d485c4dc57
     
     
 }
 
 
 var txt1 = "<maze> <scene id='000'> <id>000</id> <back>null</back> <front>002</front> <left>001</left> <right>003</right> <img>000.png</img> <puzzle>null</puzzle> </scene> <scene id='001'> <id>001</id> <back>000</back> <front>null</front> <left>null</left> <right>null</right> <img>001.png</img> <puzzle>null</puzzle> </scene> <scene id='002'> <id>002</id> <back>000</back> <front>null</front> <left>null</left> <right>null</right> <img>002.png</img> <puzzle>null</puzzle> </scene> <scene id='003'> <id>003</id> <back>000</back> <front>null</front> <left>null</left> <right>null</right> <img>003.png</img> <puzzle>null</puzzle> </scene> </maze>";
+
+        
+
 
   
