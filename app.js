@@ -132,28 +132,35 @@ function load(scene){
     console.log(intscene);
     var obj = maze.scene[intscene];
     
-    console.log(obj.img);
-    console.log(obj.right);
+    //console.log(obj.img);
+    //console.log(obj.right);
     img = obj.img;
     back = obj.back;
     left = obj.left;
+    if(left=="null")
+        {
+        document.getElementById("bLeft").style.display = 'none';
+        }else{
+        document.getElementById("bLeft").style.display = 'block';
+        console.log("left"+left);
+        }
     front = obj.front;
+        if(front=="null")
+        {
+        document.getElementById("bFront").style.display = 'none';
+        }else{
+        document.getElementById("bFront").style.display = 'block';
+        console.log("front " + front);
+        }
     right = obj.right;
+        if(right=="null")
+        {
+        document.getElementById("bRight").style.display = 'none';
+        }else{
+        document.getElementById("bRight").style.display = 'block';
+        console.log("right " + right);
+        }
     document.getElementById("background").src = "assets/"+img;
-    /*
-    text = xmlDoc.getElementsByTagName("scene").item(scene);
-    console.log(text);
-    
-    img = text.getElementsByTagName("img")[0].innerHTML;
-    back = text.getElementsByTagName("back")[0].innerHTML;
-    left = text.getElementsByTagName("left")[0].innerHTML;
-    front = text.getElementsByTagName("front")[0].innerHTML;
-    right = text.getElementsByTagName("right")[0].innerHTML;
-    
-    
-    
-    document.getElementById("background").src = "assets/lvl1/"+img;
-    */
     
 }
 
