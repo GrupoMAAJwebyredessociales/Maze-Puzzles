@@ -236,11 +236,18 @@ function locked(){
     //recoge la pregunta del json
     console.log(puzzle);
     var obj = quest.qw[puzzle];
+    //imprime por consola
     console.log("pregunta : "+ obj.pregunta);
     console.log("a -> " + obj.a);
     console.log("b -> " + obj.b);
     console.log("c -> " + obj.c);
     console.log("d -> " + obj.d);
+    //imprime en textareas
+    document.getElementById("pregunta").innerHTML = obj.pregunta;
+    document.getElementById("resA").value = obj.a;
+    document.getElementById("resB").value = obj.b;
+    document.getElementById("resC").value = obj.c;
+    document.getElementById("resD").value = obj.d;
     
 }
 function check(ans){
