@@ -1,6 +1,14 @@
 // función que permite poner visible o no una sección div, asi conseguimos que
 // la tabla se oculte cuando inciamos partida
+var victoria;
+var xmlDoc;
+var parser;
 
+var img;
+var back;
+var left;
+var front;
+var right;
 function ponerVisible(div, visible) {
 	let
 	estado = visible ? "block" : "none"; // block para que se vea, o none
@@ -72,23 +80,47 @@ $(function() {
                     ponerVisible($("#menu"), true);
                     ponerVisible($("#menuContactar"), false);
 				})
-
+    $("#bBack").click(
+                function() {
+                        if(back!=null){
+                            load(back);
+                        }
+                    });
+    $("#bFront").click(
+                function() {
+                        if(front!=null){
+                            load(front);
+                        }
+                    });
+    $("#bLeft").click(
+                function() {
+                        if(left!=null){
+                            load(left);
+                        }
+                    });
+    $("#bRight").click(
+                function() {
+                        if(right!=null){
+                            load(right);
+                        }
+                    });
     
 })
-var victoria;
-var xmlDoc;
-var parser;
 
 function play1(scene){
     victoria = false;
     
     parser = new DOMParser();
-   //xmlDoc = parser.parseFromString(txt1,"text/xml");
     xmlDoc = parser.parseFromString(txt1,"text/xml");
+    
     load(scene);
     victoria = false;
     
 }
+
+
+
+
 
 function load(scene){
     var text;
@@ -96,46 +128,19 @@ function load(scene){
     text = xmlDoc.getElementsByTagName("scene").item(scene);
     console.log(text);
     
-    var img = text.getElementsByTagName("img")[0].innerHTML;
-    var back = text.getElementsByTagName("back")[0].innerHTML;
-    var left = text.getElementsByTagName("left")[0].innerHTML;
-    var front = text.getElementsByTagName("front")[0].innerHTML;
-    var right = text.getElementsByTagName("right")[0].innerHTML;
+    img = text.getElementsByTagName("img")[0].innerHTML;
+    back = text.getElementsByTagName("back")[0].innerHTML;
+    left = text.getElementsByTagName("left")[0].innerHTML;
+    front = text.getElementsByTagName("front")[0].innerHTML;
+    right = text.getElementsByTagName("right")[0].innerHTML;
     
     /*console.log(img);*/
     
     document.getElementById("background").src = "assets/lvl1/"+img;
-    $("#bBack").click(
-			function() {
-                    if(back!=null){
-                        load(back);
-                        console.log(back);
-                    }
-				});
-    $("#bFront").click(
-			function() {
-                    if(front!=null){
-                        load(front);
-                        console.log(front);
-                    }
-				});
-    $("#bLeft").click(
-			function() {
-                    if(left!=null){
-                        load(left);
-                        console.log(left);
-                    }
-				});
-    $("#bRight").click(
-			function() {
-                    if(right!=null){
-                        load(right);
-                        console.log(right);
-                    }
-				});
     
     
 }
+
 
 var txt1 = "<maze> <scene id='000'> <id>000</id> <back>null</back> <front>002</front> <left>001</left> <right>003</right> <img>000.png</img> <puzzle>null</puzzle> </scene> <scene id='001'> <id>001</id> <back>000</back> <front>null</front> <left>null</left> <right>null</right> <img>001.png</img> <puzzle>null</puzzle> </scene> <scene id='002'> <id>002</id> <back>000</back> <front>null</front> <left>null</left> <right>null</right> <img>002.png</img> <puzzle>null</puzzle> </scene> <scene id='003'> <id>003</id> <back>000</back> <front>null</front> <left>null</left> <right>null</right> <img>003.png</img> <puzzle>null</puzzle> </scene> </maze>";
 
