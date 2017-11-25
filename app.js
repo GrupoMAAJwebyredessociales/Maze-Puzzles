@@ -40,7 +40,6 @@ $(function() {
 			function() {
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), true);
-                    ponerVisible($("#menuJugar"), true);
                 console.log("hola");
                 
 				})
@@ -216,7 +215,7 @@ function locked(){
     ponerVisible($("#menu"), false);
     ponerVisible($("#menuJugar"), false);
     ponerVisible($("#menulvl1"), false);
-    ponerVisible($("menuLocked"), true);
+    ponerVisible($("#menuLocked"), true);
     
     
     //recoge la pregunta del json
@@ -230,6 +229,7 @@ function locked(){
     
 }
 function check(ans){
+    console.log("Checkeando")
     if(quest.qw[puzzle].correcta == ans){
         //respuesta correcta
         console.log("Correcto")
@@ -237,7 +237,7 @@ function check(ans){
         ponerVisible($("#menu"), false);
         ponerVisible($("#menuJugar"), false);
         ponerVisible($("#menulvl1"), true);
-        ponerVisible($("menuLocked"), true);
+        ponerVisible($("#menuLocked"), false);
     }else{
         //respuesta incorrecta
         console.log("incorrecto");
