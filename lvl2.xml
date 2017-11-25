@@ -3,7 +3,7 @@
             
             <back>null</back>
             <front>null</front>
-            <left>009</left>
+            <left>008</left>
             <right>001</right>
             <img>000BLR.png</img>
             <puzzle>null</puzzle>
@@ -17,7 +17,7 @@
             <img>000BLR.png</img>
             <puzzle>null</puzzle>
         </scene>
-        
+      <scene id='002'></scene>
         <scene id='003'>
             
             <back>001</back>
@@ -68,7 +68,7 @@
             <puzzle>001</puzzle>
         </scene>
         
-        <scene id='009'>
+        <scene id='008'>
             
             <back>000</back>
             <front>null</front>
@@ -77,6 +77,7 @@
             <img>000B.png</img>
             <puzzle>null</puzzle>
         </scene>
+        <scene id='009'></scene>
         <scene id='0010'>
             
             <back>007</back>
@@ -149,7 +150,7 @@
             <img>001BLR.png</img>
             <puzzle>null</puzzle>
         </scene>
-        
+        <scene id='0018'></scene>
         <scene id='0019'>
             
             <back>0017</back>
@@ -279,7 +280,7 @@
             <img>002BLR.png</img>
             <puzzle>null</puzzle>
         </scene>
-        
+        <scene id='0033'></scene>
         <scene id='0034'>
             
             <back>0032</back>
@@ -372,7 +373,7 @@
         </scene>
          <scene id='0044'>
             
-            <back>0001</back>
+            <back>001</back>
             <front>null</front>
             <left>null</left>
             <right>null</right>
