@@ -38,30 +38,102 @@ span.crosshair {
     width: auto\9;
     z-index: auto;
 }
-
-#bBack{
-
+/*Juego Normal*/
+#background{
+    position:absolute;
+    z-index:absolute;
+    left:50%;  
+    top:0%;
+    height:100%;
+    width: auto;
+    transform: translate(-50%, 0);
 }
-
 #bLeft{
-  position:absolute;  
-  z-index:1;  
-  left:25%;  
-  top:25%;
+    position:absolute;
+    z-index:1; 
+    left:50%;  
+    top:82%;
+    height:auto;
+    width: 7%;
+    transform: translate(-100%, 0);
 }
 #bRight{
-  position:absolute;  
-  z-index:1;  
-  left:50%;  
-  top:25%;
+    position:absolute;
+    z-index:1; 
+    left:50%;  
+    top:82%;
+    height:auto;
+    width: 7%;
+    transform: translate(0, 0);
+}
+#bBack{
+    position:absolute;
+    z-index:1;
+    left: 50%;
+    top:90%;
+    height:10%;
+    width: auto;
+    transform: translate(-50%, 0);
 }
 #bFront{
   position:absolute;  
-  z-index:1;  
-  left:500px;  
-  top:200px;
+  z-index:1;
+  left: 50%; 
+  top:70%;
+  height:10%;
+  width: auto;
+  transform: translate(-50%, 0);
 }
+/*Sala Bloqueada*/
+#background2{
+    position:absolute;
+    z-index:absolute;
+    left:50%;  
+    top:0%;
+    height:100%;
+    width: auto;
+    transform: translate(-50%, 0);
+    
+}
+#fence{
+    position:absolute;
+    z-index:1;
+    left:50%;  
+    top:0%;
+    height:100%;
+    width: auto;
+    transform: translate(-50%, 0);
+}
+#puzzle{
+    position:absolute;
+    z-index:2;
+    left:50%;  
+    top:50%;
+    height:80%;
+    width: auto;
+    transform: translate(-50%, -50%);
+}
+#bA{
+    position:absolute;
+    z-index:3;
 
+}
+#bB{
+    position:absolute;
+    z-index:3;
+
+}
+#bC{
+    position:absolute;
+    z-index:3;
+
+
+}
+#bD{
+    position:absolute;
+    z-index:3;
+
+}
 
 /* BOTONES */
 .botonJugar {
