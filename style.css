@@ -116,23 +116,47 @@ span.crosshair {
 #bA{
     position:absolute;
     z-index:3;
-
+    top :   35%;
+    left:   33%;
+    height: 15%;
+    width:  auto;
+    transform: translate(-50%, 0);
 }
 #bB{
     position:absolute;
     z-index:3;
-
+    top :   49%;
+    left:   33%;
+    height: 15%;
+    width:  auto;
+    transform: translate(-50%, 0);
 }
 #bC{
     position:absolute;
     z-index:3;
-
-
+    top :   62%;
+    left:   33%;
+    height: 15%;
+    width:  auto;
+    transform: translate(-50%, 0);
 }
 #bD{
-    position:absolute;
+        position:absolute;
     z-index:3;
-
+    top :   75%;
+    left:   33%;
+    height: 15%;
+    width:  auto;
+    transform: translate(-50%, 0);
+}
+#bBack2{
+    position:absolute;
+    z-index:4;
+    bottom: -02%;
+    left:   50%;
+    height: 15%;
+    width:  auto;
+    transform: translate(-50%, 0);
 }
 
 /* BOTONES */
