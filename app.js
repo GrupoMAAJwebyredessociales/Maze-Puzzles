@@ -106,13 +106,15 @@ $(function() {
                     });
     
 })
-
+var maze;
 function play1(scene){
     victoria = false;
     
+    maze = JSON.parse(txt1);
+    /*
     parser = new DOMParser();
     xmlDoc = parser.parseFromString(txt1,"text/xml");
-    
+    */
     load(scene);
     victoria = false;
     
@@ -123,8 +125,11 @@ function play1(scene){
 
 
 function load(scene){
-    var text;
+    var obj = maze.maze.scene[scene];
     
+    console.log(obj.img);
+    console.log(obj.right);
+    /*
     text = xmlDoc.getElementsByTagName("scene").item(scene);
     console.log(text);
     
@@ -134,17 +139,15 @@ function load(scene){
     front = text.getElementsByTagName("front")[0].innerHTML;
     right = text.getElementsByTagName("right")[0].innerHTML;
     
-    /*console.log(img);*/
+    
     
     document.getElementById("background").src = "assets/lvl1/"+img;
-    
+    */
     
 }
 
 
-var txt1 = "<maze> <scene id='000'> <id>000</id> <back>null</back> <front>002</front> <left>001</left> <right>003</right> <img>000.png</img> <puzzle>null</puzzle> </scene> <scene id='001'> <id>001</id> <back>000</back> <front>null</front> <left>null</left> <right>null</right> <img>001.png</img> <puzzle>null</puzzle> </scene> <scene id='002'> <id>002</id> <back>000</back> <front>null</front> <left>null</left> <right>null</right> <img>002.png</img> <puzzle>null</puzzle> </scene> <scene id='003'> <id>003</id> <back>000</back> <front>null</front> <left>null</left> <right>null</right> <img>003.png</img> <puzzle>null</puzzle> </scene> </maze>";
-
-        
+var txt1 = '{ "maze": { "scene": [ { "id": "000", "back": "null", "front": "002", "left": "001", "right": "003", "img": "000.png", "puzzle": "null", "_id": "000" }, { "id": "001", "back": "000", "front": "null", "left": "null", "right": "null", "img": "001.png", "puzzle": "null", "_id": "001" }, { "id": "002", "back": "000", "front": "null", "left": "null", "right": "null", "img": "002.png", "puzzle": "null", "_id": "002" }, { "id": "003", "back": "000", "front": "null", "left": "null", "right": "null", "img": "003.png", "puzzle": "null", "_id": "003" } ] } }';
 
 
   
