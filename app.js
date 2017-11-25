@@ -82,21 +82,19 @@ $(function() {
 				})
     $("#bBack").click(
                 function() {
-                        if(back!=null){
+                        if(back!="null"){
                             load(back);
                         }
                     });
     $("#bFront").click(
                 function() {
-                        if(front!=null){
+                        if(front!="null"){
                             load(front);
                         }
                     });
     $("#bLeft").click(
                 function() {
-                        if(left!=null){
-                            
-                            
+                        if(left!="null"){
                             load(left);
                         }
                     else
@@ -106,7 +104,7 @@ $(function() {
                     });
     $("#bRight").click(
                 function() {
-                        if(right!=null){
+                        if(right!="null"){
                             load(right);
                         }
                     });
@@ -116,16 +114,10 @@ var maze;
 function play1(scene){
     victoria = false;
     
-    maze = JSON.parse(txt1);
-    /*
+    var parsed = JSON.parse(txt1);
+    maze = parsed.maze;
     parser = new DOMParser();
-<<<<<<< HEAD
-    xmlDoc = parser.parseFromString(txt1,"text/xml");
-    */
-=======
-    xmlDoc = parser.parseFromString(txt2,"text/xml");
-    
->>>>>>> 95ff1ecd72b414ade04a0f9e0435dd69a08ee01b
+
     load(scene);
     victoria = false;
     
@@ -136,10 +128,18 @@ function play1(scene){
 
 
 function load(scene){
-    var obj = maze.maze.scene[scene];
+    var intscene = parseInt(scene, 10);
+    console.log(intscene);
+    var obj = maze.scene[intscene];
     
     console.log(obj.img);
     console.log(obj.right);
+    img = obj.img;
+    back = obj.back;
+    left = obj.left;
+    front = obj.front;
+    right = obj.right;
+    document.getElementById("background").src = "assets/"+img;
     /*
     text = xmlDoc.getElementsByTagName("scene").item(scene);
     console.log(text);
@@ -158,11 +158,6 @@ function load(scene){
 }
 
 
-<<<<<<< HEAD
-var txt1 = '{ "maze": { "scene": [ { "id": "000", "back": "null", "front": "002", "left": "001", "right": "003", "img": "000.png", "puzzle": "null", "_id": "000" }, { "id": "001", "back": "000", "front": "null", "left": "null", "right": "null", "img": "001.png", "puzzle": "null", "_id": "001" }, { "id": "002", "back": "000", "front": "null", "left": "null", "right": "null", "img": "002.png", "puzzle": "null", "_id": "002" }, { "id": "003", "back": "000", "front": "null", "left": "null", "right": "null", "img": "003.png", "puzzle": "null", "_id": "003" } ] } }';
 
-=======
-var txt1 = "<maze> <scene id='000'> <id>000</id> <back>null</back> <front>002</front> <left>001</left> <right>003</right> <img>000.png</img> <puzzle>null</puzzle> </scene> <scene id='001'> <id>001</id> <back>000</back> <front>null</front> <left>003</left> <right>null</right> <img>001.png</img> <puzzle>null</puzzle> </scene> <scene id='002'> <id>002</id> <back>000</back> <front>null</front> <left>001</left> <right>null</right> <img>002.png</img> <puzzle>null</puzzle> </scene> <scene id='003'> <id>003</id> <back>000</back> <front>null</front> <left>002</left> <right>null</right> <img>003.png</img> <puzzle>null</puzzle> </scene> </maze>";
->>>>>>> 95ff1ecd72b414ade04a0f9e0435dd69a08ee01b
 
-var txt2 = "<maze> <scene id='000'> <back>null</back> <front>null</front> <left>001</left> <right>002</right> <img>000LR.png</img> <puzzle>null</puzzle> </scene> <scene id='001'> <back>000</back> <front>null</front> <left>004</left> <right>005</right> <img>000BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='002'> <back>000</back> <front>null</front> <left>007</left> <right>003</right> <img>000BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='003'> <back>002</back> <front>null</front> <left>null</left> <right>null</right> <img>000B.png</img> <puzzle>null</puzzle> </scene> <scene id='004'> <back>001</back> <front>null</front> <left>null</left> <right>null</right> <img>000B.png</img> <puzzle>null</puzzle> </scene> <scene id='005'> <back>001</back> <front>null</front> <left>006</left> <right>null</right> <img>000BL.png</img> <puzzle>null</puzzle> </scene> <scene id='006'> <back>005</back> <front>null</front> <left>null</left> <right>null</right> <img>000B.png</img> <puzzle>null</puzzle> </scene> <scene id='007'> <back>002</back> <front>null</front> <left>0010</left> <right>008</right> <img>000BLR.png</img> <puzzle>001</puzzle> </scene> <scene id='008'> <back>007</back> <front>null</front> <left>0011</left> <right>009</right> <img>001BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='009'> <back>008</back> <front>null</front> <left>null</left> <right>null</right> <img>001B.png</img> <puzzle>null</puzzle> </scene> <scene id='0010'> <back>007</back> <front>null</front> <left>0016</left> <right>0014</right> <img>001BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='0011'> <back>008</back> <front>null</front> <left>0013</left> <right>0012</right> <img>001BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='0012'> <back>0011</back> <front>null</front> <left>null</left> <right>null</right> <img>001B.png</img> <puzzle>null</puzzle> </scene> <scene id='0013'> <back>0011</back> <front>null</front> <left>0015</left> <right>null</right> <img>001BL.png</img> <puzzle>null</puzzle> </scene> <scene id='0014'> <back>0010</back> <front>null</front> <left>null</left> <right>null</right> <img>001B.png</img> <puzzle>null</puzzle> </scene> <scene id='0015'> <back>0013</back> <front>null</front> <left>null</left> <right>null</right> <img>001B.png</img> <puzzle>null</puzzle> </scene> <scene id='0016'> <back>0010</back> <front>null</front> <left>0017</left> <right>0018</right> <img>001BLR.png</img> <puzzle>002</puzzle> </scene> <scene id='0017'> <back>0016</back> <front>null</front> <left>0029</left> <right>0020</right> <img>002BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='0018'> <back>0016</back> <front>null</front> <left>0019</left> <right>0021</right> <img>002BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='0019'> <back>0018</back> <front>null</front> <left>null</left> <right>null</right> <img>002B.png</img> <puzzle>null</puzzle> </scene> <scene id='0020'> <back>0017</back> <front>null</front> <left>null</left> <right>null</right> <img>002B.png</img> <puzzle>null</puzzle> </scene> <scene id='0021'> <back>0018</back> <front>null</front> <left>0022</left> <right>0026</right> <img>002BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='0022'> <back>0021</back> <front>null</front> <left>0023</left> <right>0024</right> <img>002BLR.png</img> <puzzle>003</puzzle> </scene> <scene id='0023'> <back>0022</back> <front>null</front> <left>null</left> <right>null</right> <img>002B.png</img> <puzzle>null</puzzle> </scene> <scene id='0024'> <back>0022</back> <front>null</front> <left>null</left> <right>null</right> <img>002B.png</img> <puzzle>null</puzzle> </scene> <scene id='0025'> <back>0022</back> <front>null</front> <left>0026</left> <right>0027</right> <img>002BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='0026'> <back>0025</back> <front>null</front> <left>null</left> <right>null</right> <img>002B.png</img> <puzzle>null</puzzle> </scene> <scene id='0027'> <back>0025</back> <front>null</front> <left>null</left> <right>null</right> <img>002B.png</img> <puzzle>null</puzzle> </scene> <scene id='0028'> <back>0017</back> <front>null</front> <left>0029</left> <right>0030</right> <img>002BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='0029'> <back>0028</back> <front>null</front> <left>0031</left> <right>0032</right> <img>002BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='0030'> <back>0028</back> <front>null</front> <left>0033</left> <right>0034</right> <img>002BLR.png</img> <puzzle>null</puzzle> </scene> <scene id='0031'> <back>0029</back> <front>null</front> <left>null</left> <right>null</right> <img>002B.png</img> <puzzle>null</puzzle> </scene> <scene id='0032'> <back>0029</back> <front>null</front> <left>null</left> <right>null</right> <img>002B.png</img> <puzzle>null</puzzle> </scene> <scene id='0033'> <back>0030</back> <front>null</front> <left>null</left> <right>null</right> <img>002B.png</img> <puzzle>null</puzzle> </scene> <scene id='0034'> <back>0030</back> <front>null</front> <left>null</left> <right>null</right> <img>002B.png</img> <puzzle>null</puzzle> </scene> </maze>";
+var txt1 = '{ "maze": { "scene": [ { "back": "null", "front": "null", "left": "001", "right": "002", "img": "000BLR.png", "puzzle": "null", "_id": "000" }, { "back": "000", "front": "null", "left": "004", "right": "006", "img": "000BLR.png", "puzzle": "null", "_id": "001" }, { "back": "000", "front": "null", "left": "007", "right": "003", "img": "000BLR.png", "puzzle": "null", "_id": "002" }, { "back": "002", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null", "_id": "003" }, { "back": "001", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null", "_id": "004" }, { "back": "001", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null", "_id": "006" }, { "back": "002", "front": "null", "left": "0010", "right": "008", "img": "000BLR.png", "puzzle": "001", "_id": "007" }, { "back": "007", "front": "null", "left": "0011", "right": "009", "img": "001BLR.png", "puzzle": "null", "_id": "008" }, { "back": "008", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null", "_id": "009" }, { "back": "007", "front": "null", "left": "0016", "right": "0014", "img": "001BLR.png", "puzzle": "null", "_id": "0010" }, { "back": "008", "front": "null", "left": "0013", "right": "0012", "img": "001BLR.png", "puzzle": "null", "_id": "0011" }, { "back": "0011", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null", "_id": "0012" }, { "back": "0011", "front": "null", "left": "0015", "right": "null", "img": "001BL.png", "puzzle": "null", "_id": "0013" }, { "back": "0010", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null", "_id": "0014" }, { "back": "0013", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null", "_id": "0015" }, { "back": "0010", "front": "null", "left": "0017", "right": "0018", "img": "001BLR.png", "puzzle": "002", "_id": "0016" }, { "back": "0016", "front": "null", "left": "0029", "right": "0020", "img": "002BLR.png", "puzzle": "null", "_id": "0017" }, { "back": "0016", "front": "null", "left": "0019", "right": "0021", "img": "002BLR.png", "puzzle": "null", "_id": "0018" }, { "back": "0018", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null", "_id": "0019" }, { "back": "0017", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null", "_id": "0020" }, { "back": "0018", "front": "null", "left": "0022", "right": "0026", "img": "002BLR.png", "puzzle": "null", "_id": "0021" }, { "back": "0021", "front": "null", "left": "0023", "right": "0024", "img": "002BLR.png", "puzzle": "003", "_id": "0022" }, { "back": "0022", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null", "_id": "0023" }, { "back": "0022", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null", "_id": "0024" }, { "back": "0022", "front": "null", "left": "0026", "right": "0027", "img": "002BLR.png", "puzzle": "null", "_id": "0025" }, { "back": "0025", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null", "_id": "0026" }, { "back": "0025", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null", "_id": "0027" }, { "back": "0017", "front": "null", "left": "0029", "right": "0030", "img": "002BLR.png", "puzzle": "null", "_id": "0028" }, { "back": "0028", "front": "null", "left": "0031", "right": "0032", "img": "002BLR.png", "puzzle": "null", "_id": "0029" }, { "back": "0028", "front": "null", "left": "0033", "right": "0034", "img": "002BLR.png", "puzzle": "null", "_id": "0030" }, { "back": "0029", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null", "_id": "0031" }, { "back": "0029", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null", "_id": "0032" }, { "back": "0030", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null", "_id": "0033" }, { "back": "0030", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null", "_id": "0034" } ] } }';
