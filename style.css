@@ -163,7 +163,7 @@ span.crosshair {
 #pregunta{
 
     font-family: 'Oswald', sans-serif;
-    font-size: 1.5em;
+    font-size: 2vw;
     background: transparent;
     border: none ;
     position:absolute;
@@ -181,7 +181,7 @@ span.crosshair {
 #resA{
 
     font-family: 'Oswald', sans-serif;
-    font-size: 1.5em;
+    font-size: 2.2vw;
     background: transparent;
     border: none ;
     position:absolute;
@@ -199,7 +199,7 @@ span.crosshair {
 #resB{
 
     font-family: 'Oswald', sans-serif;
-    font-size: 1.5em;
+    font-size: 2.2vw;
     background: transparent;
     border: none ;
     position:absolute;
@@ -217,7 +217,7 @@ span.crosshair {
 #resC{
 
     font-family: 'Oswald', sans-serif;
-    font-size: 1.5em;
+    font-size: 2.2vw;
     background: transparent;
     border: none ;
     position:absolute;
@@ -235,7 +235,7 @@ span.crosshair {
 #resD{
 
     font-family: 'Oswald', sans-serif;
-    font-size: 1.5em;
+    font-size: 2.2vw;
     background: transparent;
     border: none ;
     position:absolute;
@@ -250,7 +250,7 @@ span.crosshair {
     resize: none;
     overflow:hidden;
 }
-
+/*Titulo*/
 /* BOTONES */
 .botonJugar {
 
