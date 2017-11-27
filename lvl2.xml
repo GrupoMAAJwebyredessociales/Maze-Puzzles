@@ -1,4 +1,4 @@
-<maze>
+﻿<maze>
         <scene id='000'>
             
             <back>null</back>
@@ -99,7 +99,7 @@
         <scene id='0012'>
             
             <back>0014</back>
-            <front>0016</front>
+            <front>0017</front>
             <left>null</left>
             <right>0039</right>
             <img>001BFR.png</img>
@@ -412,7 +412,7 @@
             <back>0014</back>
             <front>null</front>
             <left>null</left>
-            <right>0012</right>
+            <right>null</right>
             <img>001B.png</img>
             <puzzle>006</puzzle>
             
