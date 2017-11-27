@@ -1,4 +1,4 @@
-﻿<maze>
+<maze>
         <scene id='000'>
             
             <back>null</back>
@@ -428,3 +428,4 @@
             </scene>
         
     </maze>
+
