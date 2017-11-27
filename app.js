@@ -177,6 +177,9 @@ function load(scene){
     //console.log(obj.right);
     img = obj.img;
     left = obj.left;
+    $("#background").fadeOut(300);
+
+
     if(left=="null")
         {
         document.getElementById("bLeft").style.display = 'none';
@@ -224,7 +227,7 @@ function load(scene){
             
         }
     document.getElementById("background").src = "assets/"+img;
-    
+        $("#background").fadeIn(300);
 }
 function locked(){
     console.log("bloqueado");
@@ -253,7 +256,7 @@ function locked(){
     
 }
 function check(ans){
-    console.log("Checkeando")
+    console.log("Checkeando");
     if(quest.qw[puzzle].correcta == ans){
         //respuesta correcta
         console.log("Correcto")
