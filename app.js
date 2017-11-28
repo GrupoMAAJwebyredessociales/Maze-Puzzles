@@ -10,6 +10,7 @@ var front;
 var right;
 var puzzle;
 var lock;
+var lvl2Unlock;
 function ponerVisible(div, visible) {
 	let
 	estado = visible ? "block" : "none"; // block para que se vea, o none
@@ -33,6 +34,8 @@ function cambioEstadoBloqueado(boton, nuevoEstado){
 
 // funcion que se invoca al cargar la pagina
 $(function() {
+    lvl2Unlock=false;
+    document.getElementById("Blvl2").src = "assets/2BLock.png";
     ponerVisible($("#interrogacion"), false);
     lock = false;
     // BOTONES MENUS DEL JUEGO 
@@ -54,10 +57,11 @@ $(function() {
 				})
         $("#Blvl2").click(
 			function() {
+                if(lvl2Unlock){
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), false);
                     ponerVisible($("#menulvl2"), true);
-                
+                }
 				})
     $("#Binstrucciones").click(
 			function() {
