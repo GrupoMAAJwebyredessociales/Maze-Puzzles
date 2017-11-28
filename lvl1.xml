@@ -253,7 +253,7 @@
          <scene id='0024'>
          <imgo>null</imgo>
             <asset></asset>
-            <back>0037</back>
+            <back>0022</back>
             <front>null</front>
             <left>null</left>
             <right>null</right>
@@ -516,3 +516,4 @@
              
         </scene>
     </maze>
+
