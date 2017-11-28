@@ -35,7 +35,7 @@ function cambioEstadoBloqueado(boton, nuevoEstado){
 // funcion que se invoca al cargar la pagina
 $(function() {
     lvl2Unlock=false;
-    document.getElementById("Blvl2").src = "assets/2BLock.png";
+    document.getElementById("Blvl2").src = "assets/2Block.png";
     ponerVisible($("#interrogacion"), false);
     lock = false;
     // BOTONES MENUS DEL JUEGO 

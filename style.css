@@ -359,7 +359,7 @@ span.crosshair {
 
   background: transparent;
   border: none;
-  background-image:url(assets/Boton2.png);
+  background-image:url(assets/2Block.png);
   background-repeat:no-repeat;
   height:300px;
   width:300px;
@@ -371,7 +371,7 @@ span.crosshair {
 }
 
 .boton2:hover {
-  background-image:url(assets/Boton2Hover.png);
+  background-image:url(assets/2Block.png);
   background-repeat:no-repeat;
   height:300px;
   width:300px;
