@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Oswald" rel="stylesheet">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>MAZE QUIZ</title>
@@ -9,10 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 	<script type="text/javascript"  src="app.js"></script>
     
-	<link rel="shortcut icon" href="assets/Nav.png">
+    <link rel="shortcut icon" href="assets/Nav.png">
 	</head>
 	<body>
 		
@@ -41,6 +41,7 @@
 		</div>
         <!--- MENU NIVEL -->
         <div id="menulvl1" class="page" >
+            <img src="assets/negro.png" class="Fade" id="fade">
             <img src="assets/800x600.png"           class = "fondo"        id = "background">
             <div id="Controls">
                 <img src="assets/lvl1/arriba.png"       class = "boton_ctrl"   id = "bFront">
@@ -50,12 +51,16 @@
             </div>
             
         </div>
+        
+        <!--- MENU PREPREGUNTA-->
+        
+        <img src="assets/lvl1/interrogacion.png" class = "puerta" id = "interrogacion">
+
 
 		 <!--- MENU PREGUNTA-->
 
 		<div id="menuLocked" class="page" >
             <img src="assets/800x600.png" class = "fondo"        id = "background2">
-            <img src="assets/lvl1/fence.png"   class = "fondo_Quest"   id = "fence">
             <img src="assets/lvl1/Puzzle.png"   class = "fondo_Quest"   id = "puzzle">
             <div  id="pregunta"></div>
             <img src="assets/lvl1/A.png"   class = "boton_Quest"   id = "bA">
@@ -74,7 +79,7 @@
         <!--- MENU INSTRUCCIONES -->
 		<div id="menuInstrucciones" class="page" >
             <button class = "botonAtras" id = "BatrasIns" ></button>
-
+            
               
         </div>
         

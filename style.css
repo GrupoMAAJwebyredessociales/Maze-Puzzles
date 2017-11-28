@@ -36,9 +36,27 @@ span.crosshair {
     max-width: 100%;
     height: auto;
     width: auto\9;
-    z-index: auto;
+    z-index: absolute;
 }
 /*Juego Normal*/
+#interrogacion{
+    position:absolute;
+    z-index:5;
+    left:50%;  
+    top:50%;
+    height:auto;
+    width: auto;
+    transform: translate(-50%, -50%);
+}
+#fade{
+    position:absolute;
+    z-index:0.5;
+    left:50%;  
+    top:0%;
+    height:100%;
+    width: auto;
+    transform: translate(-50%, 0);
+}
 #background{
     position:absolute;
     z-index:absolute;
