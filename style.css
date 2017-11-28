@@ -5,8 +5,6 @@ body {
   background-position:center;
   background-size: 100%;
   background-size: cover;
-  /*background: #A4A4A4;
-  color: #A4A4A4;*/
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   line-height: 1.3;
@@ -33,6 +31,7 @@ span.crosshair {
 .fondo{
     display:block;
     position: relative;
+    background-size: 100%;
     max-width: 100%;
     height: auto;
     width: auto\9;
@@ -85,172 +84,128 @@ span.crosshair {
   transform: translate(-50%, 0);
 }
 /*Sala Bloqueada*/
+
+#menuLocked{
+  display:none;
+
+}
 #background2{
     position:absolute;
     z-index:absolute;
-    left:50%;  
+    left:15%;  
     top:0%;
     height:100%;
     width: auto;
-    transform: translate(-50%, 0);
     
 }
 #fence{
     position:absolute;
     z-index:1;
-    left:50%;  
+    left:15%;  
     top:0%;
     height:100%;
     width: auto;
-    transform: translate(-50%, 0);
 }
 #puzzle{
     position:absolute;
     z-index:2;
-    left:50%;  
-    top:50%;
+    left:22%;  
+    top:10%;
     height:80%;
     width: auto;
-    transform: translate(-50%, -50%);
 }
-#bA{
-    position:absolute;
-    z-index:3;
-    top :   36.5%;
-    left:   33%;
-    height: 13.5%;
-    width:  auto;
-    transform: translate(-50%, 0);
-}
-#bB{
-    position:absolute;
-    z-index:3;
-    top :   50%;
-    left:   33%;
-    height: 13.5%;
-    width:  auto;
-    transform: translate(-50%, 0);
-}
-#bC{
-    position:absolute;
-    z-index:3;
-    top :   63.5%;
-    left:   33%;
-    height: 13.5%;
-    width:  auto;
-    transform: translate(-50%, 0);
-}
-#bD{
-        position:absolute;
-    z-index:3;
-    top :   77%;
-    left:   33%;
-    height: 13.5%;
-    width:  auto;
-    transform: translate(-50%, 0);
-}
+
 #bBack2{
     position:absolute;
     z-index:4;
-    bottom: -02%;
-    left:   50%;
+    top:87%;
+    left:   47%;
     height: 15%;
     width:  auto;
-    transform: translate(-50%, 0);
 }
 /*cuadros de texto*/
 
 #pregunta{
 
     font-family: 'Oswald', sans-serif;
-    font-size: 2vw;
+    font-size: 2.2vw;
     background: transparent;
     border: none ;
     position:absolute;
     z-index:5;
-    top:    13.5%;
-    left:   50%;
+    top:    17%;
+    left: 28%;
     height: auto;
     max-height:16%; 
-    min-height:16%; 
-    width:  43%;
-    transform: translate(-52%, 0);
-    resize: none;
+    min-height:18%; 
+    width:  60%;
     overflow:hidden;
 }
-#resA{
 
+#respuestas{
     font-family: 'Oswald', sans-serif;
     font-size: 2.2vw;
     background: transparent;
     border: none ;
     position:absolute;
-    z-index:5;
-    top:    38%;
-    left:   56%;
-    height: auto;
-    max-height:9%; 
+    z-index:10;
+    top:    36.5%;
+    left:   38%;
+    height: 55%;
+    max-height:100%; 
     min-height:9%; 
     width:  35%;
-    transform: translate(-50%, 0);
+    text-align: left;
     resize: none;
     overflow:hidden;
+
+}
+
+
+.boton_Quest{
+    position:absolute;
+    z-index:3;
+    left:   27%;
+    height: 13.5%;
+    width:  auto;
+}
+
+#resA{
+      font-size: 150%;
+
 }
 #resB{
+    font-size: 150%;
 
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.2vw;
-    background: transparent;
-    border: none ;
-    position:absolute;
-    z-index:5;
-    top:    50.5%;
-    left:   56%;
-    height: auto;
-    max-height:9%; 
-    min-height:9%; 
-    width:  35%;
-    transform: translate(-50%, 0);
-    resize: none;
-    overflow:hidden;
 }
 #resC{
+    font-size: 150%;
 
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.2vw;
-    background: transparent;
-    border: none ;
-    position:absolute;
-    z-index:5;
-    top:    64%;
-    left:   56%;
-    height: auto;
-    max-height:9%; 
-    min-height:9%; 
-    width:  35%;
-    transform: translate(-50%, 0);
-    resize: none;
-    overflow:hidden;
 }
 #resD{
+    font-size: 150%;
 
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.2vw;
-    background: transparent;
-    border: none ;
-    position:absolute;
-    z-index:5;
-    top:    78%;
-    left:   56%;
-    height: auto;
-    max-height:9%; 
-    min-height:9%; 
-    width:  35%;
-    transform: translate(-50%, 0);
-    resize: none;
-    overflow:hidden;
+
+}
+#bA{
+    top :   36%;
+}
+#bB{
+    top :   49%;
+}
+#bC{
+    top :   63%;
+}
+#bD{
+    top :   76%;
 }
 /*Titulo*/
+
+#titulo{
+
+
+}
+
 /* BOTONES */
 .botonJugar {
 
@@ -267,7 +222,8 @@ span.crosshair {
   background-image:url(assets/BotonJugarHover.png);
   background-repeat:no-repeat;
   height:114px;
-  width:366px
+  width:366px;
+  cursor:pointer;
   background-position:center;
 }
 
@@ -292,7 +248,8 @@ span.crosshair {
   background-image:url(assets/BotonInstruccionesHover.png);
   background-repeat:no-repeat;
   height:114px;
-  width:366px
+  width:366px;
+  cursor:pointer;
   background-position:center;
 }
 
@@ -311,6 +268,7 @@ span.crosshair {
   background-repeat:no-repeat;
   height:114px;
   width:366px;
+  cursor:pointer;
   background-position:center;
 }
 

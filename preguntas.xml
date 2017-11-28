@@ -41,13 +41,13 @@
             <pregunta>"¿Cuál fue el primer videojuego de la historia?"</pregunta>
             <a>"Mario-Bros"</a>
             <b>"Alex Kidd in the miracle world"</b>
-            <c>"pong"</c>
+            <c>"Pong"</c>
             <d>"KHY"</d>
             <correcta>"c"</correcta>
         </qw>
                 <qw id="004">
             
-            <pregunta>"¿Qué año pertenece a el año del dragón en China?"</pregunta>
+            <pregunta>"¿Qué año pertenece al año del dragón en China?"</pregunta>
             <a>"1999"</a>
             <b>"2000"</b>
             <c>"2001"</c>
