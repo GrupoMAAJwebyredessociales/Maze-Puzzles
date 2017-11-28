@@ -1,5 +1,4 @@
 
-    
     <maze>
         <scene id='000'>
             <asset></asset>
@@ -155,14 +154,14 @@
             <asset></asset>
             <back>0036</back>
             <front>null</front>
-            <left>0017</left>
+            <left>0046</left>
             <right>0018</right>
             <img>002BLR.png</img>
             <puzzle>null</puzzle>
         </scene>
         <scene id='0017'>
             <asset></asset>
-            <back>0016</back>
+            <back>0046</back>
             <front>null</front>
             <left>0029</left>
             <right>0020</right>
@@ -174,7 +173,7 @@
             <back>0016</back>
             <front>null</front>
             <left>0019</left>
-            <right>0021</right>
+            <right>0043</right>
             <img>002BLR.png</img>
             <puzzle>null</puzzle>
         </scene>
@@ -198,8 +197,8 @@
         </scene>
          <scene id='0021'>
             <asset></asset>
-            <back>0018</back>
-            <front>null</front>
+            <back>0043</back>
+            <front>0044</front>
             <left>0037</left>
             <right>0026</right>
             <img>002BLR.png</img>
@@ -235,7 +234,7 @@
         </scene>
          <scene id='0025'>
             <asset></asset>
-            <back>0021</back>
+            <back>0044</back>
             <front>null</front>
             <left>0026</left>
             <right>0027</right>
@@ -266,7 +265,7 @@
             <back>0017</back>
             <front>null</front>
             <left>0029</left>
-            <right>0030</right>
+            <right>0045</right>
             <img>002BLR.png</img>
             <puzzle>null</puzzle>
         </scene>
@@ -281,7 +280,7 @@
         </scene>
          <scene id='0030'>
             <asset></asset>
-            <back>0028</back>
+            <back>0045</back>
             <front>null</front>
             <left>0033</left>
             <right>0034</right>
@@ -379,7 +378,7 @@
             <front>null</front>
             <left>null</left>
             <right>0036</right>
-            <img>000RR.png</img>
+            <img>001RR.png</img>
              <puzzle>null</puzzle>
         </scene>
         <scene id='0041'>
@@ -388,7 +387,7 @@
             <front>003</front>
             <left>null</left>
             <right>null</right>
-            <img>000FF.png</img>
+            <img>001FF.png</img>
              <puzzle>null</puzzle>
         </scene>
         <scene id='0042'>
@@ -399,5 +398,47 @@
             <right>null</right>
             <img>000FF.png</img>
              <puzzle>null</puzzle>
+             
+        </scene>
+        <scene id='0043'>
+            <asset></asset>
+            <back>0018</back>
+            <front>0021</front>
+            <left>null</left>
+            <right>null</right>
+            <img>002FF.png</img>
+             <puzzle>null</puzzle>
+             
+        </scene>
+        <scene id='0044'>
+            <asset></asset>
+            <back>0021</back>
+            <front>null</front>
+            <left>0025</left>
+            <right>null</right>
+            <img>002LL.png</img>
+             <puzzle>null</puzzle>
+             
+        </scene>
+        <scene id='0045'>
+            <asset></asset>
+            <back>0028</back>
+            <front>null</front>
+            <left>null</left>
+            <right>0030</right>
+            <img>002RR.png</img>
+             <puzzle>null</puzzle>
+             
+        </scene>
+        <scene id='0046'>
+            <asset></asset>
+            <back>0016</back>
+            <front>null</front>
+            <left>null</left>
+            <right>0017</right>
+            <img>002LL.png</img>
+             <puzzle>null</puzzle>
+             
         </scene>
     </maze>
+
