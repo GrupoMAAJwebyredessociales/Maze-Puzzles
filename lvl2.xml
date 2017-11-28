@@ -81,7 +81,7 @@
         <scene id='0010'>
             
             <back>007</back>
-            <front>0011</front>
+            <front>0050</front>
             <left>0038</left>
             <right>null</right>
             <img>000BFLpng</img>
@@ -89,7 +89,7 @@
         </scene>
         <scene id='0011'>
             
-            <back>0010</back>
+            <back>0050</back>
             <front>null</front>
             <left>0013</left>
             <right>0015</right>
@@ -163,7 +163,7 @@
         <scene id='0020'>
             
             <back>0017</back>
-            <front>0021</front>
+            <front>0051</front>
             <left>0041</left>
             <right>null</right>
             <img>001BFL.png</img>
@@ -171,7 +171,7 @@
         </scene>
          <scene id='0021'>
             
-            <back>0020</back>
+            <back>0051</back>
             <front>null</front>
             <left>0025</left>
             <right>0022</right>
@@ -424,6 +424,26 @@
             <left>null</left>
             <right>0012</right>
             <img>001B.png</img>
+            <puzzle>006</puzzle>
+            </scene>
+            <scene id='0050'>
+            
+            <back>0010</back>
+            <front>0011</front>
+            <left>null</left>
+            <right>null</right>
+            <img>000close.png</img>
+            <imgo>000open.png</imgo>
+            <puzzle>006</puzzle>
+            </scene>
+              <scene id='0051'>
+            
+            <back>0020</back>
+            <front>0021</front>
+            <left>null</left>
+            <right>null</right>
+            <img>001close.png</img>
+            <imgo>001open.png</imgo>
             <puzzle>006</puzzle>
             </scene>
         
