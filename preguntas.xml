@@ -1,123 +1,123 @@
 <xml>
     <mazepr>
-      <qw id="000">
+      <qw >
             
-            <pregunta>"¿Cuántas patas tiene un insecto?"</pregunta>
-            <a>"4"</a>
-            <b>"8"</b>
-            <c>"6"</c>
-            <d>"depende del insecto"</d>
-            <correcta>"c"</correcta>
+            <pregunta>¿Cuántas patas tiene un insecto?</pregunta>
+            <a>4</a>
+            <b>8</b>
+            <c>6</c>
+            <d>depende del insecto</d>
+            <correcta>c</correcta>
         </qw>
-        <qw id="001">
+        <qw >
             
-            <pregunta>"¿Cuál de estos animales es un mamífero?"</pregunta>
-            <a>"tiburón"</a>
-            <b>"delfín"</b>
-            <c>"manta"</c>
-            <d>"caballito de mar"</d>
-            <correcta>"b"</correcta>
+            <pregunta>¿Cuál de estos animales es un mamífero?</pregunta>
+            <a>tiburón</a>
+            <b>delfín</b>
+            <c>manta</c>
+            <d>caballito de mar</d>
+            <correcta>b</correcta>
         </qw>
-        <qw id="002">
+        <qw >
             
-            <pregunta>"¿Qué parte de las matemáticas se encarga del estudio de los numeros y operaciones con estos?"</pregunta>
-            <a>"aritmética"</a>
-            <b>"trigonometría"</b>
-            <c>"álegra"</c>
-            <d>"geometría"</d>
-            <correcta>"a"</correcta>
+            <pregunta>¿Qué parte de las matemáticas se encarga del estudio de los numeros y operaciones con estos?</pregunta>
+            <a>aritmética</a>
+            <b>trigonometría</b>
+            <c>álegra</c>
+            <d>geometría</d>
+            <correcta>a</correcta>
         </qw>
-        <qw id="003">
+        <qw >
             
-            <pregunta>"¿Cuál fue la primera raza humana?"</pregunta>
-            <a>"homo-sapiens-sapiens"</a>
-            <b>"homo-sapiens"</b>
-            <c>"namlu'u"</c>
-            <d>"homo-erectus"</d>
-            <correcta>"c"</correcta>
+            <pregunta>¿Cuál fue la primera raza humana?</pregunta>
+            <a>homo-sapiens-sapiens</a>
+            <b>homo-sapiens</b>
+            <c>namlu'u</c>
+            <d>homo-erectus</d>
+            <correcta>c</correcta>
         </qw>
-        <qw id="004">
+        <qw >
             
-            <pregunta>"¿Cuál fue el primer videojuego de la historia?"</pregunta>
-            <a>"Mario-Bros"</a>
-            <b>"Alex Kidd in the miracle world"</b>
-            <c>"Pong"</c>
-            <d>"KHY"</d>
-            <correcta>"c"</correcta>
+            <pregunta>Cuál fue el primer videojuego de la historia?</pregunta>
+            <a>Mario-Bros</a>
+            <b>Alex Kidd in the miracle world</b>
+            <c>Pong</c>
+            <d>KHY</d>
+            <correcta>c</correcta>
         </qw>
-                <qw id="004">
+                <qw >
             
-            <pregunta>"¿Qué año pertenece al año del dragón en China?"</pregunta>
-            <a>"1999"</a>
-            <b>"2000"</b>
-            <c>"2001"</c>
-            <d>"2002"</d>
-            <correcta>"b"</correcta>
+            <pregunta>¿Qué año pertenece al año del dragón en China?</pregunta>
+            <a>1999</a>
+            <b>2000</b>
+            <c>2001</c>
+            <d>2002</d>
+            <correcta>b</correcta>
         </qw>
-         <qw id="005">
+         <qw >
             
-            <pregunta>"¿En qué año se celebró la primera copa de europa de fúbol?"</pregunta>
-            <a>"1955/1956"</a>
-            <b>"1945/1946"</b>
-            <c>"1845/1846"</c>
-            <d>"1855/1856"</d>
-            <correcta>"a"</correcta>
+            <pregunta>¿En qué año se celebró la primera copa de europa de fúbol?</pregunta>
+            <a>1955/1956</a>
+            <b>1945/1946</b>
+            <c>1845/1846</c>
+            <d>1855/1856</d>
+            <correcta>a</correcta>
         </qw>
-        <qw id="006">
+        <qw>
             
-            <pregunta>"¿Cuál fue la primera consola de la historia?"</pregunta>
-            <a>"Magnavox Odyssey"</a>
-            <b>"NES"</b>
-            <c>"Atari Pong"</c>
-            <d>"TRC-1"</d>
-            <correcta>"a"</correcta>
+            <pregunta>¿Cuál fue la primera consola de la historia?</pregunta>
+            <a>Magnavox Odyssey</a>
+            <b>NES</b>
+            <c>Atari Pong</c>
+            <d>TRC-1</d>
+            <correcta>a</correcta>
         </qw>
-        <qw id="007">
+        <qw >
             
-            <pregunta>"¿Cuándo fue la fecha de la primera guerra mundial?"</pregunta>
-            <a>"1918"</a>
-            <b>"1917"</b>
-            <c>"1915"</c>
-            <d>"1914"</d>
-            <correcta>"d"</correcta>
+            <pregunta>¿Cuándo fue la fecha de la primera guerra mundial?</pregunta>
+            <a>1918</a>
+            <b>1917</b>
+            <c>1915</c>
+            <d>1914</d>
+            <correcta>d</correcta>
         </qw>
-        <qw id="008">
+        <qw>
             
-            <pregunta>"¿Cuántos Mister Olympia tiene Arnold Schwarzenegger?"</pregunta>
-            <a>"7"</a>
-            <b>"16"</b>
-            <c>"5"</c>
-            <d>"2"</d>
-            <correcta>"a"</correcta>
+            <pregunta>¿Cuántos Mister Olympia tiene Arnold Schwarzenegger?</pregunta>
+            <a>7</a>
+            <b>16</b>
+            <c>5</c>
+            <d>2</d>
+            <correcta>a</correcta>
         </qw>
-<qw id="009">
+<qw>
             
-            <pregunta>"¿Cómo se llamaba el perro de Asterix y Obelix?"</pregunta>
-            <a>"Milú"</a>
-            <b>"Niebla"</b>
-            <c>"Idefix"</c>
-            <d>"Nevado"</d>
-            <correcta>"c"</correcta>
-        </qw>
-        
-        <qw id="0010">
-            
-            <pregunta>"¿Quién fue la primera ganadora de operación triunfo?"</pregunta>
-            <a>"Chenoa"</a>
-            <b>"Rosa López"</b>
-            <c>"David Bisbal"</c>
-            <d>"Bustamante"</d>
-            <correcta>"b"</correcta>
+            <pregunta>¿Cómo se llamaba el perro de Asterix y Obelix?</pregunta>
+            <a>Milú</a>
+            <b>Niebla</b>
+            <c>Idefix</c>
+            <d>Nevado</d>
+            <correcta>c</correcta>
         </qw>
         
-        <qw id="0011">
+        <qw>
             
-            <pregunta>"¿En qué año se inaguró el metro de Madrid?"</pregunta>
-            <a>"1919"</a>
-            <b>"1818"</b>
-            <c>"1920"</c>
-            <d>"1819"</d>
-            <correcta>"a"</correcta>
+            <pregunta>¿Quién fue la primera ganadora de operación triunfo?</pregunta>
+            <a>Chenoa</a>
+            <b>Rosa López</b>
+            <c>David Bisbal</c>
+            <d>Bustamante</d>
+            <correcta>b</correcta>
+        </qw>
+        
+        <qw>
+            
+            <pregunta>¿En qué año se inaguró el metro de Madrid?</pregunta>
+            <a>1919</a>
+            <b>1818</b>
+            <c>1920</c>
+            <d>1819</d>
+            <correcta>a</correcta>
         </qw>
     
     </mazepr>
