@@ -1,4 +1,4 @@
-<xml>
+
     <maze>
         <scene id='000'>
             <asset></asset>
@@ -355,5 +355,3 @@
             <puzzle>002</puzzle>
         </scene>
     </maze>
-
-</xml>
