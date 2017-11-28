@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,17 +18,14 @@
 	<body>
 		
 		<!--- MENU PRINCIPAL -->
-		<div id = "menu" class = "page">
-            <div class = "title" id="titulo"> <img src="assets/Titulo.png" > </div>
+            <div class = "title" id="menu"> <img src="assets/Titulo.png" > </div>
             <br>
-			<p><button class = "botonJugar" id = "Bjugar"  ></button></p>
-            <p><button class = "botonInstrucciones" id = "Binstrucciones" ></button></p>
-            <p><button class = "botonContactar" id = "Bcontactar" ></button></p>
-			
+            <div id="btnPrn">
+			<button class = "botonJugar" id = "Bjugar"  ></button><br>
+            <button class = "botonInstrucciones" id = "Binstrucciones" ></button><br>
+            <button class = "botonContactar" id = "Bcontactar" ></button>
+			</div>
 
-            
-
-		</div>
 
         
 		<!--- MENU JUGAR -->
@@ -59,18 +57,21 @@
 
 		 <!--- MENU PREGUNTA-->
 
-		<div id="menuLocked" class="page" >
+		<div id="menuLocked">
             <img src="assets/800x600.png" class = "fondo"        id = "background2">
             <img src="assets/lvl1/Puzzle.png"   class = "fondo_Quest"   id = "puzzle">
-            <div  id="pregunta"></div>
-            <img src="assets/lvl1/A.png"   class = "boton_Quest"   id = "bA">
-            <div id="resA"></div>
-            <img src="assets/lvl1/B.png"   class = "boton_Quest"   id = "bB">
-            <div id="resB"></div>
-            <img src="assets/lvl1/C.png"   class = "boton_Quest"   id = "bC">
-            <div id="resC"></div>
-            <img src="assets/lvl1/D.png"   class = "boton_Quest"   id = "bD">
-            <div id="resD"></div>
+            <div id="pregunta"></div>
+                <img src="assets/lvl1/A.png"   class = "boton_Quest"   id = "bA">
+                <img src="assets/lvl1/B.png"   class = "boton_Quest"   id = "bB">
+                <img src="assets/lvl1/C.png"   class = "boton_Quest"   id = "bC">
+                <img src="assets/lvl1/D.png"   class = "boton_Quest"   id = "bD">
+
+            <table id="respuestas">
+                <tr id="resA"></tr>
+                <tr id="resB"></tr>
+                <tr id="resC"></tr>
+                <tr id="resD"></tr>
+            </table>
             <img src="assets/lvl1/abajo.png"   class = "boton_ctrl"   id = "bBack2">
 			
 				
@@ -123,3 +124,4 @@
 		 
 	</body>
 </html>
+
