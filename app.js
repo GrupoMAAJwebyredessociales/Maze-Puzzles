@@ -3,7 +3,6 @@
 var victoria;
 var xmlDoc;
 var parser;
-
 var img;
 var back;
 var left;
@@ -34,6 +33,7 @@ function cambioEstadoBloqueado(boton, nuevoEstado){
 
 // funcion que se invoca al cargar la pagina
 $(function() {
+    ponerVisible($("#interrogacion"), false);
     lock = false;
     // BOTONES MENUS DEL JUEGO 
     $("#Bjugar").click(
@@ -128,13 +128,14 @@ $(function() {
                         check("c");
                     }
                 });
+    
     $("#bD").click(
             function() {
                     if(lock){
                         check("d");
                     }
                 });
-        $("#bBack2").click(
+    $("#bBack2").click(
                 function() {
                         if(back!="null"){
                             ponerVisible($("#menu"), false);
@@ -144,6 +145,10 @@ $(function() {
                             load(back);
                         }
                     });
+    $("#interrogacion").click(
+            function() {
+                        locked();
+                });
 })
 var maze;
 var quest;
@@ -166,7 +171,7 @@ function play1(scene){
 
 
 function load(scene){
-    
+    ponerVisible($("#interrogacion"), false);
 
     
     var intscene = parseInt(scene, 10);
@@ -177,7 +182,6 @@ function load(scene){
     //console.log(obj.right);
     img = obj.img;
     left = obj.left;
-    $("#background").fadeOut(300);
 
 
     if(left=="null")
@@ -220,17 +224,24 @@ function load(scene){
             if(quest.qw[puzzle].correcta!="null"){
                 lock=true;
                 document.getElementById("background2").src = "assets/"+img;
-                locked();
+                prepregunta();
+                //locked();
             }else{
                 console.log("Valla abierta");
+                document.getElementById("background2").src = "assets/"+obj.imgo;
             }
             
         }
     document.getElementById("background").src = "assets/"+img;
-        $("#background").fadeIn(300);
+}
+function prepregunta(){
+    console.log("prepregunta");
+    ponerVisible($("#interrogacion"), true);
+    ponerVisible($("#bFront"), false);
 }
 function locked(){
     console.log("bloqueado");
+    ponerVisible($("#interrogacion"), false);
     ponerVisible($("#menu"), false);
     ponerVisible($("#menuJugar"), false);
     ponerVisible($("#menulvl1"), false);
@@ -266,6 +277,11 @@ function check(ans){
         ponerVisible($("#menuJugar"), false);
         ponerVisible($("#menulvl1"), true);
         ponerVisible($("#menuLocked"), false);
+        ponerVisible($("#bFront"), true);
+        ponerVisible($("#botones"), true);
+        var obj = quest.qw[puzzle];
+        console.log("assets/"+obj.imgo);
+        document.getElementById("background2").src = "assets/"+quest.qw[puzzle].imgo;
     }else{
         //respuesta incorrecta
         console.log("incorrecto");
@@ -279,5 +295,5 @@ function check(ans){
 
 
 
-var maze1 = '{ "maze": { "scene": [ { "-id": "000", "back": "null", "front": "null", "left": "001", "right": "002", "img": "000BLR.png", "puzzle": "null" }, { "-id": "001", "back": "000", "front": "null", "left": "004", "right": "005", "img": "000BLR.png", "puzzle": "null" }, { "-id": "002", "back": "000", "front": "null", "left": "0035", "right": "003", "img": "000BLR.png", "puzzle": "null" }, { "-id": "003", "back": "002", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null" }, { "-id": "004", "back": "001", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null" }, { "-id": "005", "back": "001", "front": "null", "left": "006", "right": "null", "img": "000BL.png", "puzzle": "null" }, { "-id": "006", "back": "005", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null" }, { "-id": "007", "back": "0035", "front": "null", "left": "0010", "right": "008", "img": "000BLR.png", "puzzle": "null" }, { "-id": "008", "back": "007", "front": "null", "left": "0011", "right": "009", "img": "001BLR.png", "puzzle": "null" }, { "-id": "009", "back": "008", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0010", "back": "007", "front": "null", "left": "0036", "right": "0014", "img": "001BLR.png", "puzzle": "null" }, { "-id": "0011", "back": "008", "front": "null", "left": "0013", "right": "0012", "img": "001BLR.png", "puzzle": "null" }, { "-id": "0012", "back": "0011", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0013", "back": "0011", "front": "null", "left": "0015", "right": "null", "img": "001BL.png", "puzzle": "null" }, { "-id": "0014", "back": "0010", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0015", "back": "0013", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0016", "back": "0036", "front": "null", "left": "0017", "right": "0018", "img": "001BLR.png", "puzzle": "null" }, { "-id": "0017", "back": "0016", "front": "null", "left": "0029", "right": "0020", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0018", "back": "0016", "front": "null", "left": "0019", "right": "0021", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0019", "back": "0018", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0020", "back": "0017", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0021", "back": "0018", "front": "null", "left": "0037", "right": "0026", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0022", "back": "0021", "front": "null", "left": "0023", "right": "0024", "img": "002BLR.png", "puzzle": "003" }, { "-id": "0023", "back": "0022", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0024", "back": "0037", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0025", "back": "0021", "front": "null", "left": "0026", "right": "0027", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0026", "back": "0025", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0027", "back": "0025", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0028", "back": "0017", "front": "null", "left": "0029", "right": "0030", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0029", "back": "0028", "front": "null", "left": "0031", "right": "0032", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0030", "back": "0028", "front": "null", "left": "0033", "right": "0034", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0031", "back": "0029", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0032", "back": "0029", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0033", "back": "0030", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0034", "back": "0030", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0035", "back": "002", "front": "007", "left": "null", "right": "null", "img": "000close.png", "imgo": "000open.png", "puzzle": "001" }, { "-id": "0036", "back": "0010", "front": "0016", "left": "null", "right": "null", "img": "001close.png", "imgo": "001open.png", "puzzle": "002" }, { "-id": "0037", "back": "0021", "front": "0024", "left": "null", "right": "null", "img": "002close.png", "imgo": "002open.png", "puzzle": "002" } ] } }';
+var maze1 = '{ "maze": { "scene": [ { "-id": "000", "back": "null", "front": "null", "left": "001", "right": "002", "img": "000BLR.png","imgo": null, "puzzle": "null" }, { "-id": "001", "back": "000", "front": "null", "left": "004", "right": "005", "img": "000BLR.png", "puzzle": "null" }, { "-id": "002", "back": "000", "front": "null", "left": "0035", "right": "003", "img": "000BLR.png", "puzzle": "null" }, { "-id": "003", "back": "002", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null" }, { "-id": "004", "back": "001", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null" }, { "-id": "005", "back": "001", "front": "null", "left": "006", "right": "null", "img": "000BL.png", "puzzle": "null" }, { "-id": "006", "back": "005", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null" }, { "-id": "007", "back": "0035", "front": "null", "left": "0010", "right": "008", "img": "000BLR.png", "puzzle": "null" }, { "-id": "008", "back": "007", "front": "null", "left": "0011", "right": "009", "img": "001BLR.png", "puzzle": "null" }, { "-id": "009", "back": "008", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0010", "back": "007", "front": "null", "left": "0036", "right": "0014", "img": "001BLR.png", "puzzle": "null" }, { "-id": "0011", "back": "008", "front": "null", "left": "0013", "right": "0012", "img": "001BLR.png", "puzzle": "null" }, { "-id": "0012", "back": "0011", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0013", "back": "0011", "front": "null", "left": "0015", "right": "null", "img": "001BL.png", "puzzle": "null" }, { "-id": "0014", "back": "0010", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0015", "back": "0013", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0016", "back": "0036", "front": "null", "left": "0017", "right": "0018", "img": "001BLR.png", "puzzle": "null" }, { "-id": "0017", "back": "0016", "front": "null", "left": "0029", "right": "0020", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0018", "back": "0016", "front": "null", "left": "0019", "right": "0021", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0019", "back": "0018", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0020", "back": "0017", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0021", "back": "0018", "front": "null", "left": "0037", "right": "0026", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0022", "back": "0021", "front": "null", "left": "0023", "right": "0024", "img": "002BLR.png", "puzzle": "003" }, { "-id": "0023", "back": "0022", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0024", "back": "0037", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0025", "back": "0021", "front": "null", "left": "0026", "right": "0027", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0026", "back": "0025", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0027", "back": "0025", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0028", "back": "0017", "front": "null", "left": "0029", "right": "0030", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0029", "back": "0028", "front": "null", "left": "0031", "right": "0032", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0030", "back": "0028", "front": "null", "left": "0033", "right": "0034", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0031", "back": "0029", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0032", "back": "0029", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0033", "back": "0030", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0034", "back": "0030", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0035", "back": "002", "front": "007", "left": "null", "right": "null", "img": "000close.png", "imgo": "000open.png", "puzzle": "001" }, { "-id": "0036", "back": "0010", "front": "0016", "left": "null", "right": "null", "img": "001close.png", "imgo": "001open.png", "puzzle": "002" }, { "-id": "0037", "back": "0021", "front": "0024", "left": "null", "right": "null", "img": "002close.png", "imgo": "002open.png", "puzzle": "002" } ] } }';
 var questions1 = '{ "xml": { "mazepr": { "qw": [ { "pregunta": "¿Cuántas patas tiene un insecto?", "a": "4", "b": "8", "c": "6", "d": "depende del insecto", "correcta": "c" }, { "pregunta": "¿Cuál de estos animales es un mamífero?", "a": "tiburón", "b": "delfín", "c": "manta", "d": "caballito de mar", "correcta": "b" }, { "pregunta": "¿Qué parte de las matemáticas se encarga del estudio de los numeros y operaciones con estos?", "a": "aritmética", "b": "trigonometría", "c": "álgebra", "d": "geometría", "correcta": "a" }, { "pregunta": "¿Cuál fue la primera raza humana?", "a": "homo-sapiens-sapiens", "b": "homo-sapiens", "c": "namlu´u", "d": "homo-erectus", "correcta": "c" }, { "pregunta": "¿Cuál fue el primer videojuego de la historia?", "a": "Mario-Bros", "b": "Alex Kidd in the miracle world", "c": "pong", "d": "KHY", "correcta": "c" }, { "pregunta": "¿Qué año pertenece a el año del dragón en China?", "a": "1999", "b": "2000", "c": "2001", "d": "2002", "correcta": "b" }, { "pregunta": "¿En que año se celebró la primera copa de europa de fúbol?", "a": "1955/1956", "b": "1945/1946", "c": "1845/1846", "d": "1855/1856", "correcta": "a" }, { "pregunta": "¿Cual fue la primera consola de la historia?", "a": "Magnavox Odyssey", "b": "NES", "c": "Atari Pong", "d": "TRC-1", "correcta": "a" }, { "pregunta": "¿Cuando fue la fecha de la primera guerra mundial?", "a": "1918", "b": "1917", "c": "1915", "d": "1914", "correcta": "d" }, { "pregunta": "¿Cuantos Mister Olympia tiene Arnold Schwarzenegger?", "a": "7", "b": "16", "c": "5", "d": "2", "correcta": "a" } ] } } }';
