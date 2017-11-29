@@ -16,6 +16,7 @@ var tIni;
 var tLvl1 = 100000; //100.000 ms (1min 40sg)
 var pen=0;          //penalizacion acumulada
 var anchura;
+var refreshIntervalId;
 function ponerVisible(div, visible) {
 	let
 	estado = visible ? "block" : "none"; // block para que se vea, o none
@@ -41,6 +42,7 @@ $(function() {
     ponerVisible($("#interrogacion"), false);
     ponerVisible($("#menuMinijuego"), false);
     lock = false;
+    
     // BOTONES MENUS DEL JUEGO 
     for(var i=0;i<16;i++){
             $("#b"+i).click(move(i));
@@ -57,7 +59,7 @@ $(function() {
                     //clock management
                     tIni=Date.now();
                     console.log("tini "+tIni);
-                    setInterval( "timer()", 500 );
+                    refreshIntervalId = setInterval( "timer()", 500 );
                 
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), false);
@@ -72,6 +74,7 @@ $(function() {
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), false);
                     ponerVisible($("#menulvl2"), true);
+                    refreshIntervalId = setInterval( "timer()", 500 );
                 }
 				})
     $("#Binstrucciones").click(
@@ -252,6 +255,11 @@ function locked(){
     ponerVisible($("#menuLocked"), true);
     
     
+    document.getElementById("bA").src = "assets/lvl1/A.png";
+    document.getElementById("bB").src = "assets/lvl1/B.png";
+    document.getElementById("bC").src = "assets/lvl1/C.png";
+    document.getElementById("bD").src = "assets/lvl1/D.png";
+    
     //recoge la pregunta del json
     console.log(puzzle);
     var obj = quest.qw[puzzle];
@@ -281,7 +289,9 @@ function check(ans){
         ponerVisible($("#menuJugar"), false);
         ponerVisible($("#menulvl1"), true);
         ponerVisible($("#menuLocked"), false);
-        ponerVisible($("#bFront"), true);
+        if(maze.scene[intscene].front!="null"){
+            ponerVisible($("#bFront"), true);
+        }
         ponerVisible($("#botones"), true);
         console.log("assets/"+maze.scene[intscene].imgo);
         document.getElementById("background").src = "assets/"+maze.scene[intscene].imgo;
@@ -326,9 +336,11 @@ function isAdyacent(id1, id2){
 }
 function derrota(){
     console.log("derrota");
+    clearInterval(refreshIntervalId);
 }
 function victoria(){
     console.log("Victoria");
+    clearInterval(refreshIntervalId);
 }
 function minijuego(){
     
