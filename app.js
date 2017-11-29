@@ -39,8 +39,12 @@ $(function() {
     anchura = $("#clock").width();
     lvl2Unlock=false;
     ponerVisible($("#interrogacion"), false);
+    ponerVisible($("#menuMinijuego"), false);
     lock = false;
     // BOTONES MENUS DEL JUEGO 
+    for(var i=0;i<16;i++){
+            $("#b"+i).click(move(i));
+    }
     $("#Bjugar").click(
 			function() {
                     ponerVisible($("#menu"), false);
@@ -307,13 +311,28 @@ function progress(timeleft, timetotal, $element) {
     $element.animate({ width: progressBarWidth }, 500)
     
 };
+function move(id){
+    
+}
+function isAdyacent(id1, id2){
+    if(id1%4==id2%4){
+        if($("#"+id1).source().contains("block")){
+            
+        }
+    }
+    if(id1/4==id2/4){
+        
+    }
+}
 function derrota(){
     console.log("derrota");
 }
 function victoria(){
     console.log("Victoria");
 }
-
+function minijuego(){
+    
+}
 
 
 var maze1 = '{ "maze": { "scene": [ { "-id": "000", "imgo": "null", "back": "null", "front": "null", "left": "0038", "right": "002", "img": "000BLR.png", "puzzle": "null" }, { "-id": "001", "imgo": "null", "back": "0038", "front": "null", "left": "004", "right": "0039", "img": "000BLR.png", "puzzle": "null" }, { "-id": "002", "imgo": "null", "back": "000", "front": "null", "left": "0035", "right": "0041", "img": "000BLR.png", "puzzle": "null" }, { "-id": "003", "imgo": "null", "back": "0041", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null" }, { "-id": "004", "imgo": "null", "back": "001", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null" }, { "-id": "005", "imgo": "null", "back": "0039", "front": "null", "left": "006", "right": "null", "img": "000LL.png", "puzzle": "null" }, { "-id": "006", "imgo": "null", "back": "005", "front": "null", "left": "null", "right": "null", "img": "000B.png", "puzzle": "null" }, { "-id": "007", "imgo": "null", "back": "0035", "front": "null", "left": "0042", "right": "008", "img": "001BLR.png", "puzzle": "null" }, { "-id": "008", "imgo": "null", "back": "007", "front": "null", "left": "0011", "right": "009", "img": "001BLR.png", "puzzle": "null" }, { "-id": "009", "imgo": "null", "back": "008", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0010", "imgo": "null", "back": "0042", "front": "null", "left": "0040", "right": "0014", "img": "001BLR.png", "puzzle": "null" }, { "-id": "0011", "imgo": "null", "back": "008", "front": "null", "left": "0013", "right": "0012", "img": "001BLR.png", "puzzle": "null" }, { "-id": "0012", "imgo": "null", "back": "0011", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0013", "imgo": "null", "back": "0011", "front": "null", "left": "0015", "right": "null", "img": "001LL.png", "puzzle": "null" }, { "-id": "0014", "imgo": "null", "back": "0010", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0015", "imgo": "null", "back": "0013", "front": "null", "left": "null", "right": "null", "img": "001B.png", "puzzle": "null" }, { "-id": "0016", "imgo": "null", "back": "0036", "front": "null", "left": "0046", "right": "0018", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0017", "imgo": "null", "back": "0046", "front": "null", "left": "0029", "right": "0020", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0018", "imgo": "null", "back": "0016", "front": "null", "left": "0019", "right": "0043", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0019", "imgo": "null", "back": "0018", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0020", "imgo": "null", "back": "0017", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0021", "imgo": "null", "back": "0018", "front": "null", "left": "0037", "right": "0026", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0022", "imgo": "null", "back": "0037", "front": "null", "left": "0023", "right": "0024", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0023", "imgo": "null", "back": "0022", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0024", "imgo": "null", "back": "0037", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0025", "imgo": "null", "back": "0021", "front": "null", "left": "0026", "right": "0027", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0026", "imgo": "null", "back": "0025", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0027", "imgo": "null", "back": "0025", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0028", "imgo": "null", "back": "0017", "front": "null", "left": "0029", "right": "0045", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0029", "imgo": "null", "back": "0028", "front": "null", "left": "0031", "right": "0032", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0030", "imgo": "null", "back": "0045", "front": "null", "left": "0033", "right": "0034", "img": "002BLR.png", "puzzle": "null" }, { "-id": "0031", "imgo": "null", "back": "0029", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0032", "imgo": "null", "back": "0029", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0033", "imgo": "null", "back": "0030", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0034", "imgo": "null", "back": "0030", "front": "null", "left": "null", "right": "null", "img": "002B.png", "puzzle": "null" }, { "-id": "0035", "imgo":"000open.png", "back": "002", "front": "007", "left": "null", "right": "null", "img": "000close.png", "puzzle": "001" }, { "-id": "0036", "imgo":"001open.png", "back": "0040", "front": "0016", "left": "null", "right": "null", "img": "001close.png", "puzzle": "002" }, { "-id": "0037", "imgo": "002open.png", "back": "0021", "front": "0022", "left": "null", "right": "null", "img": "002close.png", "puzzle": "002" }, { "-id": "0038", "imgo": "null", "back": "000", "front": "null", "left": "001", "right": "null", "img": "000LL.png", "puzzle": "null" }, { "-id": "0039", "imgo": "null", "back": "001", "front": "null", "left": "005", "right": "null", "img": "000LL.png", "puzzle": "null" }, { "-id": "0040", "imgo": "null", "back": "0010", "front": "null", "left": "null", "right": "0036", "img": "001RR.png", "puzzle": "null" }, { "-id": "0041", "imgo": "null", "back": "002", "front": "003", "left": "null", "right": "null", "img": "000FF.png", "puzzle": "null" }, { "-id": "0042", "imgo": "null", "back": "007", "front": "0010", "left": "null", "right": "null", "img": "001FF.png", "puzzle": "null" }, { "-id": "0043", "imgo": "null", "back": "0018", "front": "0021", "left": "null", "right": "null", "img": "002FF.png", "puzzle": "null" }, { "-id": "0044" }, { "-id": "0045", "imgo": "null", "back": "0028", "front": "null", "left": "null", "right": "0030", "img": "002RR.png", "puzzle": "null" }, { "-id": "0046", "imgo": "null", "back": "0016", "front": "null", "left": "0017", "right": "null", "img": "002LL.png", "puzzle": "null" } ] } }';
