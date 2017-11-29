@@ -14,6 +14,7 @@ var lvl2Unlock;
 var intscene;
 var tIni;
 var tLvl1 = 100000; //100.000 ms (1min 40sg)
+var pen=0;          //penalizacion acumulada
 var anchura;
 function ponerVisible(div, visible) {
 	let
@@ -52,7 +53,7 @@ $(function() {
                     //clock management
                     tIni=Date.now();
                     console.log("tini "+tIni);
-                    setInterval( "timer()", 1000 );
+                    setInterval( "timer()", 500 );
                 
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), false);
@@ -282,6 +283,8 @@ function check(ans){
         document.getElementById("background").src = "assets/"+maze.scene[intscene].imgo;
     }else{
         //respuesta incorrecta
+        document.getElementById("b"+ans.toUpperCase()).src = "assets/lvl1/x.png";
+        pen+=10000;
         console.log("incorrecto");
         //posible penalizacion
         
@@ -290,9 +293,9 @@ function check(ans){
     
 }
 function timer(){
-    var time = Date.now() - tIni;
+    var time = pen+Date.now() - tIni;
     if(time>=tLvl1){
-        console.log("derrota");
+        derrota();
     }else{
         progress(tLvl1-time, tLvl1,$("#clock") );
         console.log("tcurrent "+time);
@@ -300,12 +303,16 @@ function timer(){
 }
 function progress(timeleft, timetotal, $element) {
     var progressBarWidth = timeleft * anchura *10 / timetotal;
-    console.log("progressBarWidth "+progressBarWidth+" /timeleft " +timeleft+" /$element.width()"+anchura+"/timetotal "+ timetotal);
-    $element
-        .animate({ width: progressBarWidth }, 500)
-        .html(timeleft + " seconds to go");
+    //console.log("progressBarWidth "+progressBarWidth+" /timeleft " +timeleft+" /$element.width()"+anchura+"/timetotal "+ timetotal);
+    $element.animate({ width: progressBarWidth }, 500)
     
 };
+function derrota(){
+    console.log("derrota");
+}
+function victoria(){
+    console.log("Victoria");
+}
 
 
 

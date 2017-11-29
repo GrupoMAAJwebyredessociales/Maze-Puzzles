@@ -149,6 +149,15 @@ span.crosshair {
     width: 40%;
     transform: translate(-50%, 0);
 }
+/*#pen{
+    position:absolute;
+    z-index:1;
+    top:    2%;
+    left:   50%;
+    height: 5%;
+    width: 40%;
+    transform: translate(-50%, 0);
+}*/
 /*cuadros de texto*/
 
 #pregunta{
