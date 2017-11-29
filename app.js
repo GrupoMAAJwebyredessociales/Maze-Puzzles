@@ -1,6 +1,6 @@
 // función que permite poner visible o no una sección div, asi conseguimos que
 // la tabla se oculte cuando inciamos partida
-var victoria;
+
 var xmlDoc;
 var parser;
 var img;
@@ -65,7 +65,7 @@ $(function() {
                 
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), false);
-                    ponerVisible($("#menulvl1"), true);
+                    ponerVisible($("#menulvl"), true);
                 console.log("hola");
                     play1(000, maze1);
                 
@@ -73,12 +73,11 @@ $(function() {
         $("#Blvl2").click(
             
 			function() {
-                lvl2Unlock=true;
                 if(lvl2Unlock==true){
                     console.log("blvl2");
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), false);
-                    ponerVisible($("#menulvl1"), true);
+                    ponerVisible($("#menulvl"), true);
                     refreshIntervalId = setInterval( "timer()", 500 );
                     play1(000, maze2);
                 }
@@ -105,6 +104,28 @@ $(function() {
                     ponerVisible($("#menu"), true);
                     ponerVisible($("#menuContactar"), false);
 				})
+    $("#backMenu").click(
+			function() {
+                if(lvl2Unlock==true){
+                    /*
+                    var cssRules = ".boton2:hover {  background-image:url(assets/Boton2Hover.png);  background-repeat:no-repeat;  height:300px;  width:300px;  background-position:center;}";
+                    var style = document.createElement('style');
+                    if (style.styleSheet) {
+                        style.styleSheet.cssText = css;
+                    } else {
+                        style.appendChild(document.createTextNode(css));
+                    }*/
+                    console.log("Cambio a desbloqueado");
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                    document.getElementById("Blvl2").style.backgroundImage="url(assets/Boton2.png)";
+                    document.getElementById("Blvl2:hover").style.backgroundImage="url(assets/Boton2Hover.png)";
+                }
+                    ponerVisible($("#menu"), true);
+                    ponerVisible($("#menulvl"), false);
+                    ponerVisible($("#menuV"), false);
+    
+				})
+    
     $("#bBack").click(
                 function() {
                         if(back!="null"){
@@ -164,10 +185,10 @@ $(function() {
             function() {
                         locked();
                 });
+    
 })
 
 function play1(scene, mazeSelect){
-    victoria = false;
     
     
     var parsed = JSON.parse(mazeSelect);
@@ -176,7 +197,6 @@ function play1(scene, mazeSelect){
     quest = parsed2.xml.mazepr;
     
     load(scene);
-    victoria = false;
     
 }
 function load(scene){
@@ -256,7 +276,7 @@ function locked(){
     ponerVisible($("#interrogacion"), false);
     ponerVisible($("#menu"), false);
     ponerVisible($("#menuJugar"), false);
-    ponerVisible($("#menulvl1"), false);
+    ponerVisible($("#menulvl"), false);
     ponerVisible($("#menuLocked"), true);
     
     //se recuperan los assets de las preguntas para evitar que se repitan las X
@@ -292,14 +312,18 @@ function check(ans){
         quest.qw[puzzle].correcta="null";
         ponerVisible($("#menu"), false);
         ponerVisible($("#menuJugar"), false);
-        ponerVisible($("#menulvl1"), true);
+        ponerVisible($("#menulvl"), true);
         ponerVisible($("#menuLocked"), false);
         if(maze.scene[intscene].front!="null"){
             ponerVisible($("#bFront"), true);
         }
+        if(maze.scene[intscene].img=="002close.png"){
+            victoria();
+        }
         ponerVisible($("#botones"), true);
         console.log("assets/"+maze.scene[intscene].imgo);
         document.getElementById("background").src = "assets/"+maze.scene[intscene].imgo;
+
     }else{
         //respuesta incorrecta
         document.getElementById("b"+ans.toUpperCase()).src = "assets/lvl1/x.png";
@@ -346,6 +370,9 @@ function derrota(){
 function victoria(){
     console.log("Victoria");
     lvl2Unlock=true;
+    ponerVisible($("#menulvl"), false);
+    ponerVisible($("#menuV"), true);
+    
     clearInterval(refreshIntervalId);
 }
 function minijuego(){

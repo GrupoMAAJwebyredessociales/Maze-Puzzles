@@ -42,7 +42,7 @@ span.crosshair {
     z-index:5;
     left:50%;  
     top:50%;
-    height:auto;
+    height:10%;
     width: auto;
     transform: translate(-50%, -50%);
 }
@@ -99,6 +99,24 @@ span.crosshair {
   height:10%;
   width: auto;
   transform: translate(-50%, 0);
+}
+/* Victoria*/
+#backMenu{
+    position:absolute;
+    z-index:1;
+    top:87%;
+    left:   47%;
+    height: 7%;
+    width:  auto;
+}
+#Victoria{
+    position:absolute;
+    z-index:absolute;
+    left:15%;  
+    top:0%;
+    height:100%;
+    width: auto;
+    
 }
 /*Sala Bloqueada*/
 
@@ -388,13 +406,7 @@ span.crosshair {
   margin-left: 50px;
 }
 
-.boton2:hover {
-  background-image:url(assets/2Block.png);
-  background-repeat:no-repeat;
-  height:300px;
-  width:300px;
-  background-position:center;
-}
+
 
 .boton2:active {
 	position:relative;
