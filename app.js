@@ -165,7 +165,7 @@ function play1(scene){
     victoria = false;
     
     
-    var parsed = JSON.parse(maze2);
+    var parsed = JSON.parse(maze1);
     maze = parsed.maze;
     var parsed2 = JSON.parse(questions1);
     quest = parsed2.xml.mazepr;
