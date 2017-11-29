@@ -13,7 +13,7 @@ var lock;
 var lvl2Unlock;
 var intscene;
 var tIni;
-var tLvl1 = 100000; //100.000 ms (1min 40sg)
+//var tLvl1 = 100000; //100.000 ms (1min 40sg)
 var pen=0;          //penalizacion acumulada
 var anchura;
 var refreshIntervalId;
@@ -58,15 +58,14 @@ $(function() {
 				})
         $("#Blvl1").click(
 			function() {
-                    //clock management
-                    tIni=Date.now();
-                    console.log("tini "+tIni);
-                    refreshIntervalId = setInterval( "timer()", 500 );
-                
-                    ponerVisible($("#menu"), false);
+                    
                     ponerVisible($("#menuJugar"), false);
                     ponerVisible($("#menulvl"), true);
-                console.log("hola");
+                    //clock management
+                    tIni=Date.now();
+                    refreshIntervalId = setInterval( function() { timer(100000) }, 500 );
+                    console.log("tini "+tIni);
+                    pen=0;
                     play1(000, maze1);
                 
 				})
@@ -78,7 +77,10 @@ $(function() {
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), false);
                     ponerVisible($("#menulvl"), true);
-                    refreshIntervalId = setInterval( "timer()", 500 );
+                    tIni=Date.now();
+                    refreshIntervalId = setInterval( function() { timer(150000) }, 500 );
+                    console.log("tini "+tIni);
+                    pen=0;
                     play1(000, maze2);
                 }
 				})
@@ -104,21 +106,24 @@ $(function() {
                     ponerVisible($("#menu"), true);
                     ponerVisible($("#menuContactar"), false);
 				})
+    $("#Blvl2").hover(
+            function(){
+                        if(lvl2Unlock==true){
+                            document.getElementById("Blvl2").style.backgroundImage="url(assets/Boton2Hover.png)";
+                        }
+                      },
+            function(){
+                        if(lvl2Unlock==true){
+                                    document.getElementById("Blvl2").style.backgroundImage="url(assets/Boton2.png)";
+                                }
+            })
     $("#backMenu").click(
 			function() {
                 if(lvl2Unlock==true){
-                    /*
-                    var cssRules = ".boton2:hover {  background-image:url(assets/Boton2Hover.png);  background-repeat:no-repeat;  height:300px;  width:300px;  background-position:center;}";
-                    var style = document.createElement('style');
-                    if (style.styleSheet) {
-                        style.styleSheet.cssText = css;
-                    } else {
-                        style.appendChild(document.createTextNode(css));
-                    }*/
+                    
+                    
                     console.log("Cambio a desbloqueado");
-                    document.getElementsByTagName('head')[0].appendChild(style);
                     document.getElementById("Blvl2").style.backgroundImage="url(assets/Boton2.png)";
-                    document.getElementById("Blvl2:hover").style.backgroundImage="url(assets/Boton2Hover.png)";
                 }
                     ponerVisible($("#menu"), true);
                     ponerVisible($("#menulvl"), false);
@@ -274,8 +279,6 @@ function prepregunta(){
 function locked(){
     console.log("bloqueado");
     ponerVisible($("#interrogacion"), false);
-    ponerVisible($("#menu"), false);
-    ponerVisible($("#menuJugar"), false);
     ponerVisible($("#menulvl"), false);
     ponerVisible($("#menuLocked"), true);
     
@@ -310,10 +313,10 @@ function check(ans){
         console.log("Correcto")
         lock = false;
         quest.qw[puzzle].correcta="null";
-        ponerVisible($("#menu"), false);
-        ponerVisible($("#menuJugar"), false);
+        
         ponerVisible($("#menulvl"), true);
         ponerVisible($("#menuLocked"), false);
+        
         if(maze.scene[intscene].front!="null"){
             ponerVisible($("#bFront"), true);
         }
@@ -335,12 +338,12 @@ function check(ans){
     }
     
 }
-function timer(){
+function timer(timeFinal){
     var time = pen+Date.now() - tIni;
-    if(time>=tLvl1){
+    if(time>=timeFinal){
         derrota();
     }else{
-        progress(tLvl1-time, tLvl1,$("#clock") );
+        progress(timeFinal-time, timeFinal,$("#clock") );
         console.log("tcurrent "+time);
     }
 }
