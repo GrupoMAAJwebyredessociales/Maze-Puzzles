@@ -27,29 +27,29 @@
 		<scene id="004">
 			<back>0062</back>
 			<front>0038</front>
-			<left>005</left>
+			<left>0063</left>
 			<right>null</right>
 			<img>000BFL.png</img>
 			<puzzle>null</puzzle>
 		</scene>
 		<scene id="005">
-			<back>004</back>
+			<back>0063</back>
 			<front>0036</front>
-			<left>006</left>
+			<left>0064</left>
 			<right>null</right>
 			<img>000BFL.png</img>
 			<puzzle>null</puzzle>
 		</scene>
 		<scene id="006">
-			<back>005</back>
+			<back>0064</back>
 			<front>null</front>
 			<left>0037</left>
-			<right>007</right>
+			<right>0065</right>
 			<img>000BLR.png</img>
 			<puzzle>null</puzzle>
 		</scene>
 		<scene id="007">
-			<back>006</back>
+			<back>0064</back>
 			<front>0010</front>
 			<left>null</left>
 			<right>0050</right>
@@ -83,7 +83,7 @@
 		</scene>
 		<scene id="0012">
 			<back>0053</back>
-			<front>0017</front>
+			<front>0067</front>
 			<left>null</left>
 			<right>0039</right>
 			<img>001BFR.png</img>
@@ -91,14 +91,14 @@
 		</scene>
 		<scene id="0013">
 			<back>0052</back>
-			<front>0014</front>
+			<front>0066</front>
 			<left>0045</left>
 			<right>null</right>
 			<img>001BFL.png</img>
 			<puzzle>null</puzzle>
 		</scene>
 		<scene id="0014">
-			<back>0013</back>
+			<back>0066</back>
 			<front>0048</front>
 			<left>null</left>
 			<right>0053</right>
@@ -115,16 +115,16 @@
 		</scene>
 		<scene id="0016">
 			<back>0015</back>
-			<front>0017</front>
+			<front>0068</front>
 			<left>null</left>
 			<right>0040</right>
 			<img>001BFR.png</img>
 			<puzzle>null</puzzle>
 		</scene>
 		<scene id="0017">
-			<back>0016</back>
+			<back>0067</back>
 			<front>null</front>
-			<left>0020</left>
+			<left>0069</left>
 			<right>0019</right>
 			<img>001BLR.png</img>
 			<puzzle>null</puzzle>
@@ -139,7 +139,7 @@
 			<puzzle>null</puzzle>
 		</scene>
 		<scene id="0020">
-			<back>0017</back>
+			<back>0069</back>
 			<front>0051</front>
 			<left>0041</left>
 			<right>null</right>
@@ -163,8 +163,8 @@
 			<puzzle>null</puzzle>
 		</scene>
 		<scene id="0023">
-			<back>0026</back>
-			<front>0027</front>
+			<back>0070</back>
+			<front>0071</front>
 			<left>null</left>
 			<right>0024</right>
 			<img>002BFR.png</img>
@@ -188,15 +188,15 @@
 		</scene>
 		<scene id="0026">
 			<back>0025</back>
-			<front>0023</front>
+			<front>0070</front>
 			<left>0042</left>
 			<right>null</right>
 			<img>002BFL.png</img>
 			<puzzle>null</puzzle>
 		</scene>
 		<scene id="0027">
-			<back>0023</back>
-			<front>0032</front>
+			<back>0071</back>
+			<front>0072</front>
 			<left>0029</left>
 			<right>0057</right>
 			<img>002BFLR.png</img>
@@ -235,7 +235,7 @@
 			<puzzle>null</puzzle>
 		</scene>
 		<scene id="0032">
-			<back>0027</back>
+			<back>0072</back>
 			<front>null</front>
 			<left>0058</left>
 			<right>0034</right>
@@ -490,6 +490,106 @@
             <left>null</left>
             <right>004</right>
             <img>000RR.png</img>
+            <imgo>null</imgo>
+            <puzzle>null</puzzle>
+            </scene>
+             <scene id='0063'>
+            <asset></asset>
+            <back>004</back>
+            <front>null</front>
+            <left>null</left>
+            <right>005</right>
+            <img>000RR.png</img>
+            <imgo>null</imgo>
+            <puzzle>null</puzzle>
+            </scene>
+             <scene id='0064'>
+            <asset></asset>
+            <back>005</back>
+            <front>null</front>
+            <left>006</left>
+            <right>null</right>
+            <img>000LL.png</img>
+            <imgo>null</imgo>
+            <puzzle>null</puzzle>
+            </scene>
+             <scene id='0065'>
+            <asset></asset>
+            <back>006</back>
+            <front>007</front>
+            <left>null</left>
+            <right>null</right>
+            <img>000FF.png</img>
+            <imgo>null</imgo>
+            <puzzle>null</puzzle>
+            </scene>
+            <scene id='0066'>
+            <asset></asset>
+            <back>0013</back>
+            <front>null</front>
+            <left>null</left>
+            <right>0014</right>
+            <img>001RR.png</img>
+            <imgo>null</imgo>
+            <puzzle>null</puzzle>
+            </scene>
+            <scene id='0067'>
+            <asset></asset>
+            <back>0012</back>
+            <front>null</front>
+            <left>0017</left>
+            <right>null</right>
+            <img>001LL.png</img>
+            <imgo>null</imgo>
+            <puzzle>null</puzzle>
+            </scene>
+            <scene id='0068'>
+            <asset></asset>
+            <back>0016</back>
+            <front>null</front>
+            <left>0017</left>
+            <right>null</right>
+            <img>001LL.png</img>
+            <imgo>null</imgo>
+            <puzzle>null</puzzle>
+            </scene>
+             <scene id='0069'>
+            <asset></asset>
+            <back>0017</back>
+            <front>0020</front>
+            <left>null</left>
+            <right>null</right>
+            <img>001FF.png</img>
+            <imgo>null</imgo>
+            <puzzle>null</puzzle>
+            </scene>
+             <scene id='0070'>
+            <asset></asset>
+            <back>0026</back>
+            <front>null</front>
+            <left>null</left>
+            <right>0023</right>
+            <img>002RR.png</img>
+            <imgo>null</imgo>
+            <puzzle>null</puzzle>
+            </scene>
+             <scene id='0071'>
+            <asset></asset>
+            <back>0023</back>
+            <front>null</front>
+            <left>null</left>
+            <right>0027</right>
+            <img>002RR.png</img>
+            <imgo>null</imgo>
+            <puzzle>null</puzzle>
+            </scene>
+            <scene id='0072'>
+            <asset></asset>
+            <back>0027</back>
+            <front>0032</front>
+            <left>null</left>
+            <right>null</right>
+            <img>002FF.png</img>
             <imgo>null</imgo>
             <puzzle>null</puzzle>
             </scene>
