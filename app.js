@@ -17,6 +17,8 @@ var tLvl1 = 100000; //100.000 ms (1min 40sg)
 var pen=0;          //penalizacion acumulada
 var anchura;
 var refreshIntervalId;
+var maze;
+var quest;
 function ponerVisible(div, visible) {
 	let
 	estado = visible ? "block" : "none"; // block para que se vea, o none
@@ -65,16 +67,20 @@ $(function() {
                     ponerVisible($("#menuJugar"), false);
                     ponerVisible($("#menulvl1"), true);
                 console.log("hola");
-                    play1(000);
+                    play1(000, maze1);
                 
 				})
         $("#Blvl2").click(
+            
 			function() {
-                if(lvl2Unlock){
+                lvl2Unlock=true;
+                if(lvl2Unlock==true){
+                    console.log("blvl2");
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), false);
-                    ponerVisible($("#menulvl2"), true);
+                    ponerVisible($("#menulvl1"), true);
                     refreshIntervalId = setInterval( "timer()", 500 );
+                    play1(000, maze2);
                 }
 				})
     $("#Binstrucciones").click(
@@ -159,13 +165,12 @@ $(function() {
                         locked();
                 });
 })
-var maze;
-var quest;
-function play1(scene){
+
+function play1(scene, mazeSelect){
     victoria = false;
     
     
-    var parsed = JSON.parse(maze1);
+    var parsed = JSON.parse(mazeSelect);
     maze = parsed.maze;
     var parsed2 = JSON.parse(questions1);
     quest = parsed2.xml.mazepr;
@@ -254,7 +259,7 @@ function locked(){
     ponerVisible($("#menulvl1"), false);
     ponerVisible($("#menuLocked"), true);
     
-    
+    //se recuperan los assets de las preguntas para evitar que se repitan las X
     document.getElementById("bA").src = "assets/lvl1/A.png";
     document.getElementById("bB").src = "assets/lvl1/B.png";
     document.getElementById("bC").src = "assets/lvl1/C.png";
@@ -298,10 +303,10 @@ function check(ans){
     }else{
         //respuesta incorrecta
         document.getElementById("b"+ans.toUpperCase()).src = "assets/lvl1/x.png";
-        pen+=10000;
+
         console.log("incorrecto");
         //posible penalizacion
-        
+        pen+=10000;
         //
     }
     
@@ -340,6 +345,7 @@ function derrota(){
 }
 function victoria(){
     console.log("Victoria");
+    lvl2Unlock=true;
     clearInterval(refreshIntervalId);
 }
 function minijuego(){
