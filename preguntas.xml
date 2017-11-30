@@ -119,7 +119,97 @@
             <d>1819</d>
             <correcta>a</correcta>
         </qw>
-    
+        <qw>
+        <pregunta>¿En qué año se fundó ferrari?</pregunta>
+            <a>1909</a>
+            <b>1931</b>
+            <c>1963</c>
+            <d>1939</d>
+            <correcta>d</correcta>
+        
+        </qw>
+        <qw>
+        <pregunta>¿Qué famoso compositor se quedo sordo?</pregunta>
+            <a>1909</a>
+            <b>1931</b>
+            <c>1963</c>
+            <d>1939</d>
+            <correcta>d</correcta>
+        
+        </qw>
+    <qw>
+        <pregunta>¿Cuál de las siguientes marcas es estadounidense?</pregunta>
+            <a>Fortuna</a>
+            <b>Malboro</b>
+            <c>Ducados</c>
+            <d>Nobel</d>
+            <correcta>b</correcta>
+        
+        </qw>
+        <qw>
+        <pregunta>¿Cuál de las siguientes consolas fue la más vendida?</pregunta>
+            <a>Nintendo DS</a>
+            <b>PS2</b>
+            <c>Game boy advance</c>
+            <d>Wii</d>
+            <correcta>b</correcta>
+        
+        </qw>
+        <qw>
+        <pregunta>¿Cuál fue el primer presidente de España?</pregunta>
+            <a>Zapatero</a>
+            <b>Aznar</b>
+            <c>Adolfo Suarez</c>
+            <d>Aznar</d>
+            <correcta>c</correcta>
+        
+        </qw>
+        <qw>
+        <pregunta>¿En qué se mide la intensidad de corriente?</pregunta>
+            <a>Amperios</a>
+            <b>Voltios</b>
+            <c>Grados</c>
+            <d>candelas</d>
+            <correcta>a</correcta>
+        
+        </qw>
+        <qw>
+        <pregunta>¿Cuántas champions tiene el Arsenal FC?</pregunta>
+            <a>0</a>
+            <b>1</b>
+            <c>3</c>
+            <d>4</d>
+            <correcta>a</correcta>
+        
+        </qw>
+         <qw>
+        <pregunta>¿Cuál es el animal más fuerte del mundo?</pregunta>
+            <a>Hormiga</a>
+            <b>Gorila</b>
+            <c>Tigre</c>
+            <d>Escarabajo Rinoceronte</d>
+            <correcta>d</correcta>
+        
+        </qw>
+         <qw>
+        <pregunta>¿Cuál es el animal más fuerte del mundo?</pregunta>
+            <a>Hormiga</a>
+            <b>Gorila</b>
+            <c>Tigre</c>
+            <d>Escarabajo Rinoceronte</d>
+            <correcta>d</correcta>
+        
+        </qw>
+         <qw>
+        <pregunta>¿Cuál es el video mas visto en youtube</pregunta>
+            <a>Manerasde molestar a tu vecino (Rubius)</a>
+            <b>Mejores record Guinnes</b>
+            <c>Buleria</c>
+            <d>Ganma Style</d>
+            <correcta>d</correcta>
+        
+        </qw>
+        
     </mazepr>
 
 </xml>
