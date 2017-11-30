@@ -178,6 +178,7 @@ span.crosshair {
     width: auto;
     
 }*/
+/*
 #b0  {
     height:5%;
   width: auto;
@@ -227,12 +228,13 @@ span.crosshair {
 #b15 {  height:5%;
   width: auto;
   z-index: 10;}
-/*
+*/
 .boton_minijuego{
   height:5%;
   width: auto;
   z-index: 10;
-}*/
+  resize: none;
+}
 
 /*#pen{
     position:absolute;
