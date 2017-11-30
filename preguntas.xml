@@ -173,6 +173,43 @@
             <correcta>a</correcta>
         
         </qw>
+        <qw>
+        <pregunta>¿Cuántas champions tiene el Arsenal FC?</pregunta>
+            <a>0</a>
+            <b>1</b>
+            <c>3</c>
+            <d>4</d>
+            <correcta>a</correcta>
+        
+        </qw>
+         <qw>
+        <pregunta>¿Cuál es el animal más fuerte del mundo?</pregunta>
+            <a>Hormiga</a>
+            <b>Gorila</b>
+            <c>Tigre</c>
+            <d>Escarabajo Rinoceronte</d>
+            <correcta>d</correcta>
+        
+        </qw>
+         <qw>
+        <pregunta>¿Cuál es el animal más fuerte del mundo?</pregunta>
+            <a>Hormiga</a>
+            <b>Gorila</b>
+            <c>Tigre</c>
+            <d>Escarabajo Rinoceronte</d>
+            <correcta>d</correcta>
+        
+        </qw>
+         <qw>
+        <pregunta>¿Cuál es el video mas visto en youtube</pregunta>
+            <a>Manerasde molestar a tu vecino (Rubius)</a>
+            <b>Mejores record Guinnes</b>
+            <c>Buleria</c>
+            <d>Ganma Style</d>
+            <correcta>d</correcta>
+        
+        </qw>
+        
     </mazepr>
 
 </xml>
