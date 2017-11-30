@@ -167,6 +167,73 @@ span.crosshair {
     width: 40%;
     transform: translate(-50%, 0);
 }
+/*Menu Minijuego*/
+/*
+#background3{
+    position:absolute;
+    z-index:absolute;
+    left:15%;  
+    top:0%;
+    height:100%;
+    width: auto;
+    
+}*/
+#b0  {
+    height:5%;
+  width: auto;
+  z-index: 10;}
+#b1  {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b2  {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b3  {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b4  {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b5  {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b6  {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b7  {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b8  {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b9  {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b10 {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b11 {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b12 {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b13 {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b14 {  height:5%;
+  width: auto;
+  z-index: 10;}
+#b15 {  height:5%;
+  width: auto;
+  z-index: 10;}
+/*
+.boton_minijuego{
+  height:5%;
+  width: auto;
+  z-index: 10;
+}*/
+
 /*#pen{
     position:absolute;
     z-index:1;
