@@ -130,11 +130,11 @@
         </qw>
         <qw>
         <pregunta>¿Qué famoso compositor se quedo sordo?</pregunta>
-            <a>1909</a>
-            <b>1931</b>
-            <c>1963</c>
-            <d>1939</d>
-            <correcta>d</correcta>
+            <a>Beethoven</a>
+            <b>Mozart</b>
+            <c>Vivaldi</c>
+            <d>Chaikovski</d>
+            <correcta>a</correcta>
         
         </qw>
     <qw>
@@ -160,7 +160,7 @@
             <a>Zapatero</a>
             <b>Aznar</b>
             <c>Adolfo Suarez</c>
-            <d>Aznar</d>
+            <d>Rajoy</d>
             <correcta>c</correcta>
         
         </qw>
@@ -192,16 +192,16 @@
         
         </qw>
          <qw>
-        <pregunta>¿Cuál es el animal más fuerte del mundo?</pregunta>
-            <a>Hormiga</a>
-            <b>Gorila</b>
-            <c>Tigre</c>
-            <d>Escarabajo Rinoceronte</d>
+        <pregunta>¿Qué es la capoira?</pregunta>
+            <a>Una comida</a>
+            <b>Una provincia</b>
+            <c>Un baile</c>
+            <d>Un arte marcial</d>
             <correcta>d</correcta>
         
         </qw>
          <qw>
-        <pregunta>¿Cuál es el video mas visto en youtube</pregunta>
+        <pregunta>¿Cuál es el video mas visto en youtube?</pregunta>
             <a>Manerasde molestar a tu vecino (Rubius)</a>
             <b>Mejores record Guinnes</b>
             <c>Buleria</c>
