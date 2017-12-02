@@ -29,7 +29,9 @@
         </div>
             
 
-
+        <!-- Barra tiempo -->
+        
+            <img src="assets/red-bar.png"           class = "time"        id = "clock">
         
 		<!--- MENU JUGAR -->
 
@@ -44,7 +46,7 @@
         <div id="menulvl" class="page" >
             <img src="assets/negro.png" class="Fade" id="fade">
             <img src="assets/800x600.png"           class = "fondo"        id = "background">
-            <img src="assets/red-bar.png"           class = "time"        id = "clock">
+            <img            class = "asset"        id = "asset">
             <div id="Controls">
                 <img src="assets/lvl1/arriba.png"       class = "boton_ctrl"   id = "bFront">
                 <img src="assets/lvl1/izquierda.png"           class = "boton_ctrl"   id = "bLeft">
@@ -73,7 +75,7 @@
                 <img src="assets/lvl1/B.png"   class = "boton_Quest"   id = "bB">
                 <img src="assets/lvl1/C.png"   class = "boton_Quest"   id = "bC">
                 <img src="assets/lvl1/D.png"   class = "boton_Quest"   id = "bD">
-            
+            <img src="assets/+10.png"   class = "boton_Quest"   id = "10">
             <table id="respuestas">
                 <tr id="resA"></tr>
                 <tr id="resB"></tr>
@@ -103,7 +105,16 @@
                 <img src="assets/vacio.png"     class = "boton_minijuego"     id ="b15">
         </div>
         
-        
+        <!--- MENU INSERT HIGHSCORE -->
+        <div id="menuInsertHighscore">
+            <textarea id="insertHighscore"></textarea> 
+            <img src="assets/ok.png" id="ok">
+        </div> 
+        <!--- MENU HIGHSCORE -->
+        <div id="menuHighscore">
+            <div id="Highscore"></div> 
+            <img src="assets/BotonAtras.png" id="backHighscores">
+        </div> 
         <!--- MENU INSTRUCCIONES -->
 		<div id="menuInstrucciones" class="page" >
             <button class = "botonAtras" id = "BatrasIns" ></button>
