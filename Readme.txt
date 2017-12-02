@@ -1,1 +1,1 @@
-[![N|Solid](https://github.com/GrupoMAAJwebyredessociales/MazeQuiz/blob/master/assets/BotonJugar.png)](https://grupomaajwebyredessociales.github.io/MazeQuiz/)
+![Jugar](assets/BotonJugar.png)(https://grupomaajwebyredessociales.github.io/MazeQuiz/)
