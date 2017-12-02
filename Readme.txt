@@ -1,1 +1,1 @@
-![Jugar](assets/BotonJugar.png)(https://grupomaajwebyredessociales.github.io/MazeQuiz/)
+![Jugar](assets/BotonJugar.png)](https://grupomaajwebyredessociales.github.io/MazeQuiz/)
