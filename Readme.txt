@@ -1,1 +1,1 @@
-![Jugar](https://github.com/GrupoMAAJwebyredessociales/MazeQuiz/blob/master/assets/BotonJugar.png)
+![Jugar](assets/BotonJugar.png)
