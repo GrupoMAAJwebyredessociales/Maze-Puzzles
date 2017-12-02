@@ -1,1 +1,1 @@
-[![N|Solid](http://www.pngmart.com/files/3/Play-Button-PNG-Picture.png)](https://grupomaajwebyredessociales.github.io/MazeQuiz/)
+[![N|Solid](https://github.com/GrupoMAAJwebyredessociales/MazeQuiz/blob/master/assets/BotonJugar.png)](https://grupomaajwebyredessociales.github.io/MazeQuiz/)
