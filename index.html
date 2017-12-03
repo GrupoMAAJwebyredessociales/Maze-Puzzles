@@ -12,7 +12,10 @@
     <audio id="sound2" src="assets/sound/Tema2.ogg"></audio>
         
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta 
+     name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' 
+    />
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript"  src="app.js"></script>
@@ -25,13 +28,15 @@
 		
 		<!--- MENU PRINCIPAL -->
         <div id = "menu">
-            <div class = "title" id="title"> <img src="assets/Titulo.png" > </div>
+            <div class = "title" id="title">
+                <img src="assets/Titulo.png" class:"titulo" >
+            </div>
             <br>
             <div id="btnPrn">
-			<button class = "botonJugar" id = "Bjugar"  ></button><br>
-            <button class = "botonInstrucciones" id = "Binstrucciones" ></button><br>
-            <button class = "botonContactar" id = "Bcontactar" ></button>
-            <button class = "botonHighscores" id = "Bhighscores" ></button>
+    			<button class = "btnMenu botonJugar" id = "Bjugar"  ></button><br>
+                <button class = "btnMenu botonInstrucciones" id = "Binstrucciones" ></button><br>
+                <button class = "btnMenu botonContactar" id = "Bcontactar" ></button><br>
+                <button class = "btnMenu botonHighscores" id = "Bhighscores" ></button>
 			</div>
         </div>
             
@@ -45,8 +50,8 @@
 		<div id="menuJugar" class="page" >
             
 			<br>
-            <button class = "boton1" id = "Blvl1" ></button>
-			<button class = "boton2" id = "Blvl2"></button>
+            <button class = "btnlvl boton1" id = "Blvl1" ></button>
+			<button class = "btnlvl boton2" id = "Blvl2"></button>
 				
 		</div>
         <!--- MENU NIVEL -->
