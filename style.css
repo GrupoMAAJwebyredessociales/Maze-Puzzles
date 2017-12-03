@@ -119,12 +119,12 @@ span.crosshair {
     left:   47%;
     height: 7%;
     width:  auto;
-}
+}/*
 #backMenu:hover {
   background-image:url(assets/BotonAtrasHover.png);
   background-repeat:no-repeat;
   background-position:center;
-}
+}*/
 
 #Victoria{
     position:absolute;
@@ -209,83 +209,31 @@ span.crosshair {
     transform: translate(-50%, 0);
 }
 /*Menu Minijuego*/
-/*
-#background3{
-    position:absolute;
-    z-index:absolute;
-    left:15%;  
-    top:0%;
-    height:100%;
-    width: auto;
-    
-}*/
-/*
-#b0  {
-    height:5%;
-  width: auto;
-  z-index: 10;}
-#b1  {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b2  {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b3  {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b4  {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b5  {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b6  {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b7  {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b8  {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b9  {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b10 {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b11 {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b12 {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b13 {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b14 {  height:5%;
-  width: auto;
-  z-index: 10;}
-#b15 {  height:5%;
-  width: auto;
-  z-index: 10;}
-*/
+#b0  {  transform: translate(-200%, -200%);}
+#b1  {  transform: translate(-100%, -200%);}
+#b2  {  transform: translate(0, -200%);}
+#b3  {  transform: translate(+100%, -200%);}
+#b4  {  transform: translate(-200%, -100%);}
+#b5  {  transform: translate(-100%, -100%);}
+#b6  {  transform: translate(0, -100%);}
+#b7  {  transform: translate(100%, -100%);}
+#b8  {  transform: translate(-200%, 0);}
+#b9  {  transform: translate(-100%, 0);}
+#b10 {  transform: translate(0, 0);}
+#b11 {  transform: translate(100%, 0);}
+#b12 {  transform: translate(-200%, +100%);}
+#b13 {  transform: translate(-100%, +100%);}
+#b14 {  transform: translate(0, +100%);}
+#b15 {  transform: translate(100%, +100%);}
 .boton_minijuego{
-  height:5%;
-  width: auto;
-  z-index: 10;
-  resize: none;
+    left:50%;
+    top:50%;
+    position: absolute;
+    height:15%;
+    width: auto;
 }
 
-/*#pen{
-    position:absolute;
-    z-index:1;
-    top:    2%;
-    left:   50%;
-    height: 5%;
-    width: 40%;
-    transform: translate(-50%, 0);
-}*/
+
 /* Highscores */
 #insertHighscore{
     top: 50%;
@@ -295,7 +243,9 @@ span.crosshair {
     z-index: 5;
     
 }
+/*
 #ok{
+    position: absolute;
     background-image:url(assets/ok.png);
     top: 80%;
     left: 80%;
@@ -304,12 +254,12 @@ span.crosshair {
     z-index: 5;
     
 }
-.bOk:hover {
+#ok:hover {
   background-image:url(assets/okHover.png);
   background-repeat:no-repeat;
   background-position:center;
 }
-
+*/
 
 #Highscore{
     top: 50%;
@@ -651,4 +601,52 @@ span.crosshair {
     z-index: 5;
     transform: translate(-50%,0);
     
+}
+#casilla{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    height:45%;
+    width: 25%;
+    transform: translate(-52%,-48%);
+    z-index: 3;
+}
+#insertHighscore{
+    position:absolute;
+    top: 36%;
+    left: 50%;
+    height:8%;
+    width: 20%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+    
+    font-family: 'Oswald', sans-serif;
+    font-size: 5vmin;
+    background: transparent;
+    border: none ;
+    overflow:hidden;
+}
+#ok{
+    position:absolute;
+     top: 75%;
+    left: 50%;
+    height:20%;
+    width: auto;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+}
+#asset{
+    position:absolute;
+    z-index:0.6;
+    left:50%;  
+    top:0%;
+    height:100%;
+    width: auto;
+    transform: translate(-50%, 0);
+}
+#sound1{
+    volume: 0.5;
+}
+#sound2{
+    volume: 0.5;
 }

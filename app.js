@@ -64,7 +64,7 @@ $(function() {
                 console.log("hola");
                 
 				})
-        $("#Blvl1").click(
+    $("#Blvl1").click(
 			function() {
                     currentMaze=1;
                     ponerVisible($("#menuJugar"), false);
@@ -79,7 +79,7 @@ $(function() {
                     play1(000, maze1);
                 
 				})
-        $("#Blvl2").click(
+    $("#Blvl2").click(
             
 			function() {
                 if(lvl2Unlock==true){
@@ -243,17 +243,32 @@ $(function() {
 
     $("#interrogacion").click(
             function() {
+                
+                //document.getElementById('sound1').animate({volume: 0.5}, 500);
+                document.getElementById('sound2').pause();
+                document.getElementById('sound1').play();
+                //fadein(document.getElementById('sound1'));
                 if(maze.scene[intscene].img=="002Close.png"){
                     minijuego();
                 }else{
                     locked();
                 }
                 });
+    document.getElementById('sound1').addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+    document.getElementById('sound2').addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
     
 })
 
+
 function play1(scene, mazeSelect){
-    
+
+    document.getElementById("sound2").play();
     
     var parsed = JSON.parse(mazeSelect);
     maze = parsed.maze;
@@ -393,7 +408,8 @@ function check(ans){
         if(maze.scene[intscene].front!="null"){
             ponerVisible($("#bFront"), true);
         }
-        
+        document.getElementById('sound2').animate({volume: 0.5}, 500);
+        document.getElementById('sound1').animate({volume: 0}, 500);
         ponerVisible($("#botones"), true);
         console.log("assets/"+maze.scene[intscene].imgo);
         document.getElementById("background").src = "assets/"+maze.scene[intscene].imgo;
@@ -494,6 +510,8 @@ function resetMinijuego(){
 }
 /* Victoria / Derrota */
 function derrota(){
+    document.getElementById('sound2').pause();
+    document.getElementById('sound1').pause();
     ponerVisible($("#clock"), false);
     console.log("derrota");
     ponerVisible($("#menuMinijuego"), false);
@@ -505,7 +523,9 @@ function derrota(){
     clearInterval(refreshIntervalId);
 }
 function victoria(){
-    
+
+    document.getElementById('sound2').pause();
+    document.getElementById('sound1').pause();
     ponerVisible($("#clock"), false);
     console.log("Victoria");
     lvl2Unlock=true;
@@ -541,7 +561,7 @@ function getHighScores(maze){
     var str = "";
     var i;
     for(i in obj){
-        str = str + i +  ") Nombre -> " + obj[i].name+ "/ Puntuacion -> " +obj[i].punt + "\n";
+        str = str + i +  ") " + obj[i].name+ " - Puntuacion -> " +obj[i].punt + "\n";
     }
     console.log(str);
     $("#Highscore").val(str);
