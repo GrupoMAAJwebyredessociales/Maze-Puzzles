@@ -5,11 +5,7 @@ body {
   background-position:center;
   background-size: cover;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  /*line-height: 1.3;
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 2em 2em em;*/                
+  font-size: 20px;            
 }
 
 
@@ -18,7 +14,7 @@ span.crosshair {
 }
 
 #menu{
-	display:block;
+	/*display:block;*/
 }
 
 .page{
@@ -394,23 +390,40 @@ span.crosshair {
 /*Titulo*/
 
 
+
+
 /* BOTONES */
+
+#btnPrn{
+  width:30%;  
+  height: 50%;
+  left:32%;
+  top:35%;
+  position: absolute;
+  z-index: 1;
+  background-size: 20%;
+}
+.btnMenu{
+  height:20%;
+  width:100%;
+
+}
+
 .botonJugar {
 
   background: transparent;
   border: none !important;
   background-image:url(assets/BotonJugar.png);
   background-repeat:no-repeat;
-  height:114px;
-  width:366px;
+  background-size: contain;
   background-position:center;
+
 }
 
 .botonJugar:hover {
   background-image:url(assets/BotonJugarHover.png);
   background-repeat:no-repeat;
-  height:114px;
-  width:366px;
+  background-size: contain;
   cursor:pointer;
   background-position:center;
 }
@@ -427,18 +440,16 @@ span.crosshair {
   border: none;
   background-image:url(assets/BotonInstrucciones.png);
   background-repeat:no-repeat;
-  height:114px;
-  width:366px;
   background-position:center;
+  background-size: contain;
 }
 
 .botonInstrucciones:hover {
   background-image:url(assets/BotonInstruccionesHover.png);
   background-repeat:no-repeat;
-  height:114px;
-  width:366px;
   cursor:pointer;
   background-position:center;
+  background-size: contain;
 }
 
 .botonInstrucciones:active {
@@ -455,10 +466,9 @@ span.crosshair {
   background-repeat:no-repeat;
     left: 50%;
     top: 80%;
-  height:114px;
-  width:366px;
   cursor:pointer;
   background-position:center;
+  background-size: contain;
 }
 .botonContactar {
 
@@ -466,18 +476,16 @@ span.crosshair {
   border: none ;
   background-image:url(assets/BotonContactar.png);
   background-repeat:no-repeat;
-  height:114px;
-  width:366px;
   cursor:pointer;
   background-position:center;
+  background-size: contain;
 }
 
 .botonContactar:hover {
   background-image:url(assets/BotonContactarHover.png);
   background-repeat:no-repeat;
-  height:114px;
-  width:366px;
   background-position:center;
+  background-size: contain;
 }
 
 .botonContactar:active {
@@ -493,16 +501,16 @@ span.crosshair {
   border: none;
   background-image:url(assets/BotonAtras.png);
   background-repeat:no-repeat;
-  height:114px;
-  width:366px;
+  height:20%;
+  width:100%;
   background-position:center;
 }
 
 .botonAtras:hover {
   background-image:url(assets/BotonAtrasHover.png);
   background-repeat:no-repeat;
-  height:114px;
-  width:366px
+  height:20%;
+  width:100%;
   background-position:center;
 }
 
@@ -513,27 +521,68 @@ span.crosshair {
 
 }
 
-.boton1 {
+#btnPrn{
+  width:30%;  
+  height: 50%;
+  left:32%;
+  top:35%;
+  position: absolute;
+  z-index: 1;
+  background-size: 20%;
+}
+.btnMenu{
+  height:20%;
+  width:100%;
+
+}
+
+.botonJugar {
 
   background: transparent;
-  border: none;
-  background-image:url(assets/Boton1.png);
+  border: none !important;
+  background-image:url(assets/BotonJugar.png);
   background-repeat:no-repeat;
-  height:300px;
-  width:300px;
+  background-size: contain;
+  background-position:center;
+
+
+}
+
+#menuJugar{
+  position: absolute;
+  height: 20%;
+  width:70%;
+  left:10%;
+  z-index: 1;
+  background-size: 20%;
+
+}
+
+.btnlvl{
+  background: transparent;
+  border: none;
+  background-repeat:no-repeat;
+  height:50%;
+  width:50%;
   background-position:center;
   margin-top: 50px;
   margin-right: 50px;
   margin-bottom: 50px;
   margin-left: 50px;
+
+}
+
+.boton1 {
+
+  background-image:url(assets/Boton1.png);
+  background-size: contain;
+
+
 }
 
 .boton1:hover {
   background-image:url(assets/Boton1Hover.png);
-  background-repeat:no-repeat;
-  height:300px;
-  width:300px;
-  background-position:center;
+  background-size: contain;
 }
 
 .boton1:active {
@@ -543,18 +592,8 @@ span.crosshair {
 
 }
 .boton2 {
-
-  background: transparent;
-  border: none;
   background-image:url(assets/2Block.png);
-  background-repeat:no-repeat;
-  height:300px;
-  width:300px;
-  background-position:center;
-  margin-top: 50px;
-  margin-right: 50px;
-  margin-bottom: 50px;
-  margin-left: 50px;
+  background-size: contain;
 }
 
 
