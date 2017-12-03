@@ -237,7 +237,7 @@
 			<puzzle>null</puzzle>
 		</scene>
 		<scene id="0029">
-		<asset>arañazo</asset>
+		<asset>aranazo</asset>
 			<back>0027</back>
 			<front>null</front>
 			<left>null</left>
@@ -292,7 +292,7 @@
 			<puzzle>null</puzzle>
 		</scene>
 		<scene id="0036">
-		<asset>araña</asset>
+		<asset>arana</asset>
 			<back>005</back>
 			<front>null</front>
 			<left>null</left>
@@ -654,4 +654,3 @@
             <puzzle>null</puzzle>
             </scene>
     </maze>
-
