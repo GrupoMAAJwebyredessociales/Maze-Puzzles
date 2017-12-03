@@ -52,7 +52,7 @@ $(function() {
     // BOTONES MENUS DEL JUEGO 
     for(var i=0; i<16; i++){
             $("#b"+i).click(
-            function() {
+            function(event) {
                     console.log(getVacio());
                     isAdyacent(event.target.id.substring(1), getVacio());
             })
