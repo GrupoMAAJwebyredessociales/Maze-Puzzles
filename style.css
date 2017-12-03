@@ -127,6 +127,24 @@ span.crosshair {
     width: auto;
     
 }
+/* Derrota */
+#backMenuD{
+    position:absolute;
+    z-index:1;
+    top:87%;
+    left:   47%;
+    height: 7%;
+    width:  auto;
+}
+#Derrota{
+    position:absolute;
+    z-index:absolute;
+    left:15%;  
+    top:0%;
+    height:100%;
+    width: auto;
+    
+}
 /*Sala Bloqueada*/
 
 #menuLocked{
@@ -271,13 +289,13 @@ span.crosshair {
     z-index: 5;
     
 }
+
 #Highscore{
     top: 50%;
     left: 50%;
     height:auto;
     width: auto;
     z-index: 5;
-    transform: translate(-50%,-50%);
     
 }
 #backHighScores{
@@ -429,7 +447,19 @@ span.crosshair {
 	font-size: 130%;
 
 }
-
+#Bhighscores{
+      background: transparent;
+    background-image:url(assets/BotonInstruccionesHover.png);
+  border: none ;
+    z-index: 5;
+  background-repeat:no-repeat;
+    left: 50%;
+    top: 80%;
+  height:114px;
+  width:366px;
+  cursor:pointer;
+  background-position:center;
+}
 .botonContactar {
 
   background: transparent;

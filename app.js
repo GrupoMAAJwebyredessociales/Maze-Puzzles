@@ -120,6 +120,28 @@ $(function() {
                     ponerVisible($("#menu"), true);
                     ponerVisible($("#menuContactar"), false);
 				})
+    $("#Bhighscores").click(
+                function() {
+                        getHighScores(1);
+                        ponerVisible($("#menu"), false);
+                        ponerVisible($("#menuHighscore"), true);
+                    });
+    
+     $("#highscore1").click(
+                function() {
+                        getHighScores(1);
+                    });
+     $("#highscore2").click(
+                function() {
+                        getHighScores(2);
+                    });
+    $("#backHighscores").click(
+                function() {
+                    ponerVisible($("#menuHighscore"), false);
+                     ponerVisible($("#menu"), true);
+                    
+                    });
+    
     $("#Blvl2").hover(
             function(){
                         if(lvl2Unlock==true){
@@ -142,6 +164,14 @@ $(function() {
                     InsertHighscore();
                     ponerVisible($("#menulvl"), false);
                     ponerVisible($("#menuV"), false);
+                
+    
+				})
+    $("#backMenuD").click(
+			function() {
+                    ponerVisible($("#menu"), true);
+                    ponerVisible($("#menulvl"), false);
+                    ponerVisible($("#menuD"), false);
                 
     
 				})
@@ -381,6 +411,7 @@ function check(ans){
     }
     
 }
+//Controladores de tiempo
 function timer(timeFinal){
     var time = pen+Date.now() - tIni;
     currentTime = time;
@@ -391,15 +422,14 @@ function timer(timeFinal){
         //console.log("tcurrent "+time);
     }
 }
+//Controlador de la barra de tiempo
 function progress(timeleft, timetotal, $element) {
     var progressBarWidth = timeleft * anchura / timetotal;
     //console.log("progressBarWidth "+progressBarWidth+" /timeleft " +timeleft+" /$element.width()"+anchura+"/timetotal "+ timetotal);
     $element.animate({ width: progressBarWidth }, 500);
     
 };
-
 //Minijuego
-
 function move(id1, id2){
             console.log(id1+" - "+id2);
             console.log(document.getElementById("b15").src);
@@ -462,9 +492,14 @@ function resetMinijuego(){
 }
 /* Victoria / Derrota */
 function derrota(){
-    InsertHighscore();
     ponerVisible($("#clock"), false);
     console.log("derrota");
+    ponerVisible($("#menuMinijuego"), false);
+    ponerVisible($("#menuLocked"), false);
+    
+    //ponerVisible($("#menuD"), true);
+    $("#menulvl").fadeOut(1000);
+    $("#menuD").fadeIn(1000);
     clearInterval(refreshIntervalId);
 }
 function victoria(){
@@ -478,7 +513,6 @@ function victoria(){
     
     clearInterval(refreshIntervalId);
 }
-
 //Guardado De HighScores
 function InsertHighscore(){
     ponerVisible($("#menuV"), false);
@@ -495,7 +529,7 @@ function checkHighScores(maze, nameIn, puntIn){
         var obj = JSON.parse(localStorage.getItem("highscores" + maze));
         obj.push(puntuacion);
         //console.log(JSON.stringify(obj));
-        obj.sort(function(a, b){return b.punt - a.punt});
+        obj.sort(function(a, b){return a.punt - b.punt});
         obj = obj.slice(0, 9);
         localStorage.setItem("highscores" + maze, JSON.stringify(obj));
     }
@@ -507,7 +541,8 @@ function getHighScores(maze){
     for(i in obj){
         str = str + i +  ") Nombre -> " + obj[i].name+ "/ Puntuacion -> " +obj[i].punt + "\n";
     }
-    return str;
+    console.log(str);
+    $("#Highscore").val(str);
     //console.log(localStorage.getItem("highscores"));
     //Actualiza los datos de Maximas puntuaciones
 }
