@@ -40,6 +40,7 @@ span.crosshair {
     top:50%;
     height:10%;
     width: auto;
+    
     transform: translate(-50%, -50%);
 }
 #fade{
@@ -107,6 +108,7 @@ span.crosshair {
 }
 /* Victoria*/
 #backMenu{
+    background-image:url(assets/BotonAtras.png);
     position:absolute;
     z-index:1;
     top:87%;
@@ -114,6 +116,12 @@ span.crosshair {
     height: 7%;
     width:  auto;
 }
+#backMenu:hover {
+  background-image:url(assets/BotonAtrasHover.png);
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
 #Victoria{
     position:absolute;
     z-index:absolute;
@@ -125,12 +133,18 @@ span.crosshair {
 }
 /* Derrota */
 #backMenuD{
+    background-image:url(assets/BotonAtras.png);
     position:absolute;
     z-index:1;
     top:87%;
     left:   47%;
     height: 7%;
     width:  auto;
+}
+#backMenuD:hover {
+  background-image:url(assets/BotonAtrasHover.png);
+  background-repeat:no-repeat;
+  background-position:center;
 }
 #Derrota{
     position:absolute;
@@ -278,6 +292,7 @@ span.crosshair {
     
 }
 #ok{
+    background-image:url(assets/ok.png);
     top: 80%;
     left: 80%;
     height:5%;
@@ -285,6 +300,12 @@ span.crosshair {
     z-index: 5;
     
 }
+.bOk:hover {
+  background-image:url(assets/okHover.png);
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
 
 #Highscore{
     top: 50%;
@@ -294,14 +315,12 @@ span.crosshair {
     z-index: 5;
     
 }
-#backHighScores{
-    top: 80%;
-    left: 80%;
-    height:5%;
-    width: auto;
-    z-index: 5;
-    transform: translate(-50%,-50%);
-    
+
+.back:hover {
+  background-image:url(assets/BotonAtrasHover.png);
+  background-repeat:no-repeat;
+
+  background-position:center;
 }
 /*cuadros de texto*/
 
@@ -458,9 +477,10 @@ span.crosshair {
 	font-size: 130%;
 
 }
+
 #Bhighscores{
       background: transparent;
-    background-image:url(assets/BotonInstruccionesHover.png);
+    background-image:url(assets/BotonMP.png);
   border: none ;
     z-index: 5;
   background-repeat:no-repeat;
@@ -470,6 +490,14 @@ span.crosshair {
   background-position:center;
   background-size: contain;
 }
+#Bhighscores:hover {
+  background-image:url(assets/BotonMPHover.png);
+  background-repeat:no-repeat;
+  height:114px;
+  width:366px;
+  background-position:center;
+}
+
 .botonContactar {
 
   background: transparent;
@@ -509,8 +537,11 @@ span.crosshair {
 .botonAtras:hover {
   background-image:url(assets/BotonAtrasHover.png);
   background-repeat:no-repeat;
+<<<<<<< HEAD
   height:20%;
   width:100%;
+=======
+>>>>>>> 19a9e14f02a6f40be9570b94d1986ebbd342f170
   background-position:center;
 }
 
@@ -521,6 +552,7 @@ span.crosshair {
 
 }
 
+<<<<<<< HEAD
 #btnPrn{
   width:30%;  
   height: 50%;
@@ -547,6 +579,11 @@ span.crosshair {
 
 
 }
+=======
+
+
+.boton1 {
+>>>>>>> 19a9e14f02a6f40be9570b94d1986ebbd342f170
 
 #menuJugar{
   position: absolute;
@@ -603,4 +640,63 @@ span.crosshair {
 	top:1px;
 	font-size: 130%;
 
+}
+#highscore1{
+    
+	position:absolute;
+    top: 0%;
+    left:40%;
+    height:auto;
+    width: 7%;
+    z-index: 7;
+}
+#highscore2{
+    
+	position:absolute;
+    top: 0%;
+    left:50%;
+    height:auto;
+    width: 7%;
+    z-index: 7;
+}
+#Highscore{
+    
+    position:absolute;
+    top: 28%;
+    left:50%;
+    height:60%;
+    width: auto;
+    z-index: 5;
+    
+    font-family: 'Oswald', sans-serif;
+    font-size: 3vmin;
+    background: transparent;
+    border: none ;
+    overflow:hidden;
+    
+    transform: translate(-50%, 0);
+}
+#leaderboard{
+    
+    position:absolute;
+    top: 18%;
+    left:50%;
+    height:80%;
+    width: auto;
+    z-index: 2;
+    
+    transform: translate(-50%, 0);
+
+}
+#backHighscores{
+    
+    position:absolute;
+    /*background-image:url(assets/BotonAtras.png);*/
+    top: 80%;
+    left: 80%;
+    height:10%;
+    width: auto;
+    z-index: 5;
+    transform: translate(-50%,0);
+    
 }

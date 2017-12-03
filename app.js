@@ -178,11 +178,13 @@ $(function() {
     
     $("#ok").click(
                 function() {
-                       // if($("#insertHighscore").text()!=""){ }
+                    if($("#insertHighscore").val()!=""){ 
                     console.log(currentMaze+"->"+$("#insertHighscore").val()+"->"+currentTime);
                     checkHighScores(currentMaze,$("#insertHighscore").val(),currentTime);
                     ponerVisible($("#menuInsertHighscore"), false);
                     ponerVisible($("#menu"), true);
+                    }
+                    
                     });
     $("#bBack").click(
                 function() {
