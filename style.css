@@ -704,6 +704,49 @@ span.crosshair {
 	font-size: 130%;
 
 }
+<<<<<<< HEAD
+=======
+.boton3 {
+  background-image:url(assets/3Block.png);
+  background-size: contain;
+}
+
+
+
+.boton3:active {
+	position:relative;
+	top:1px;
+	font-size: 130%;
+
+}
+#highscore1{
+    
+	position:absolute;
+    top: 0%;
+    left:37%;
+    height:auto;
+    width: 7%;
+    z-index: 7;
+}
+#highscore2{
+    
+	position:absolute;
+    top: 0%;
+    left:47%;
+    height:auto;
+    width: 7%;
+    z-index: 7;
+}
+#highscore3{
+    
+	position:absolute;
+    top: 0%;
+    left:57%;
+    height:auto;
+    width: 7%;
+    z-index: 7;
+}
+>>>>>>> 1df94760980cffe8652b1ff4b7359d0631658006
 #Highscore{
     
     position:absolute;
