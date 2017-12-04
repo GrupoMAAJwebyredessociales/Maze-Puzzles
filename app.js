@@ -98,6 +98,25 @@ $(function() {
                     play1(000, maze2);
                 }
 				})
+    $("#Blvl3").click(
+            
+			function() {
+                if(lvl3Unlock==true){
+                    currentMaze=3;
+                    console.log("blvl3");
+                    ponerVisible($("#menu"), false);
+                    ponerVisible($("#menuJugar"), false);
+                    ponerVisible($("#menulvl"), true);
+                    tIni=Date.now();
+                    refreshIntervalId = setInterval( function() { timer(150000) }, 500 );
+                    console.log("tini "+tIni);
+                    pen=0;
+                    
+                    
+                    ponerVisible($("#clock"), true);
+                    play1(000, maze3);
+                }
+				})
     $("#Binstrucciones").click(
 			function() {
                     ponerVisible($("#menu"), false);
@@ -135,6 +154,10 @@ $(function() {
                 function() {
                         getHighScores(2);
                     });
+     $("#highscore2").click(
+                function() {
+                        getHighScores(3);
+                    });
     $("#backHighscores").click(
                 function() {
                     ponerVisible($("#menuHighscore"), false);
@@ -153,6 +176,17 @@ $(function() {
                                     document.getElementById("Blvl2").style.backgroundImage="url(assets/Boton2.png)";
                                 }
             })
+    $("#Blvl2").hover(
+        function(){
+                    if(lvl3Unlock==true){
+                        document.getElementById("Blvl3").style.backgroundImage="url(assets/Boton3Hover.png)";
+                    }
+                  },
+        function(){
+                    if(lvl3Unlock==true){
+                                document.getElementById("Blvl3").style.backgroundImage="url(assets/Boton3.png)";
+                            }   
+        })
     $("#backMenu").click(
 			function() {
                 if(lvl2Unlock==true){
@@ -265,7 +299,7 @@ $(function() {
     
 })
 
-
+//Inicializa el laberinto
 function play1(scene, mazeSelect){
 
     document.getElementById("sound2").play();
@@ -528,7 +562,11 @@ function victoria(){
     document.getElementById('sound1').pause();
     ponerVisible($("#clock"), false);
     console.log("Victoria");
-    lvl2Unlock=true;
+    if(currentMaze==1){
+        lvl2Unlock=true;
+    }else if(currentMaze==2){
+        lvl3Unlock=true;
+    }
     ponerVisible($("#menuMinijuego"), false);
     ponerVisible($("#menulvl"), false);
     ponerVisible($("#menuV"), true);
