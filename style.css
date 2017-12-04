@@ -301,7 +301,7 @@ span.crosshair {
 
 #Highscore{
     top: 50%;
-    left: 50%;
+    left: 100%;
     height:auto;
     width: auto;
     z-index: 5;
@@ -309,15 +309,15 @@ span.crosshair {
 }
 
 #menuHighscore{
+  position: absolute;
   height: 100%;
   width: 100%;
-  position: absolute;
 }
 
 
 #btnslvl{
   position: absolute;
-  height: 10%;
+  height: 40%;
   width:40%;
   left:30%;
   z-index: 1;
@@ -328,8 +328,8 @@ span.crosshair {
   background: transparent;
   border: none;
   background-repeat:no-repeat;
-  height:100%;
-  width:20%;
+  height:30%;
+  width:30%;
   background-position:center;
 }
 
@@ -355,6 +355,17 @@ span.crosshair {
   background-size: contain; 
 }
 
+.highscore3{
+
+  background-image:url(assets/Boton3.png);
+  background-size: contain;
+}
+
+.highscore3:hover{
+   background-image:url(assets/Boton3Hover.png);
+  background-size: contain; 
+}
+
 #mierda{
   position: absolute;
 
@@ -363,17 +374,34 @@ span.crosshair {
   z-index: 5;
 }
 
-
+#atras{
+  position: absolute;
+  height: 20%;
+  width:20%;
+  top: 80%;
+  left: 70%;
+}
 .backHighscores{
   background: transparent;
-    position: absolute;
+  position: absolute;
   background-image:url(assets/BotonAtras.png);
   border: none;
   background-repeat: no-repeat;
-  height: 20%;
-  width:40%;
-  top: 80%;
-  left: 70%;
+  height: 100%;
+  width:100%;
+  background-size: contain; 
+}
+
+.backHighscores:hover{
+  background: transparent;
+  position: absolute;
+  background-image:url(assets/BotonAtrasHover.png);
+  border: none;
+  background-repeat: no-repeat;
+  height: 100%;
+  width:100%;
+  background-size: contain;
+
 }
 
 /*cuadros de texto*/
@@ -718,38 +746,11 @@ span.crosshair {
 	font-size: 130%;
 
 }
-#highscore1{
-    
-	position:absolute;
-    top: 0%;
-    left:37%;
-    height:auto;
-    width: 7%;
-    z-index: 7;
-}
-#highscore2{
-    
-	position:absolute;
-    top: 0%;
-    left:47%;
-    height:auto;
-    width: 7%;
-    z-index: 7;
-}
-#highscore3{
-    
-	position:absolute;
-    top: 0%;
-    left:57%;
-    height:auto;
-    width: 7%;
-    z-index: 7;
-}
 #Highscore{
     
     position:absolute;
-    top: 28%;
-    left:25%;
+    top: 29%;
+    left:32%;
     height:60%;
     width: auto;
     z-index: 5;
@@ -764,7 +765,7 @@ span.crosshair {
     
     position:absolute;
     top: 18%;
-    left:20%;
+    left:30%;
     height:80%;
     width: auto;
     z-index: 2;
