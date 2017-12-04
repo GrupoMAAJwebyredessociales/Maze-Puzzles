@@ -19,36 +19,28 @@ var anchura;
 var refreshIntervalId;
 var maze;
 var quest;
+
+// función que cambia de estado a bloqueado y viceversa
 function ponerVisible(div, visible) {
-	let
-	estado = visible ? "block" : "none"; // block para que se vea, o none
+	let	estado = visible ? "block" : "none"; // block para que se vea, o none
 											// para que no se vea
 	div.css({
 		"display" : estado
 	});
 }
-// función que cambia de estado a bloqueado y viceversa (uso de botones)
-function cambioEstadoBloqueado(boton, nuevoEstado){
-	if(nuevoEstado){// true para activarlo
-		boton.css({"opacity":1}); // opacity 1 visible
-		boton.prop("disabled", false);
-	}else{
-		boton.css({"opacity":0.5}); // opacity 0,5 no puede usarse
-		boton.prop("disabled", true);
-		}
-}
+
 // funcion que se invoca al cargar la pagina
 // Carga de los diferentes botones e iniciacion de algunas variables y valores
 $(function() {
     ponerVisible($("#menuHighscore"), false);
     ponerVisible($("#menuInsertHighscore"), false);
+    ponerVisible($("#interrogacion"), false);
+    ponerVisible($("#menuMinijuego"), false);
     ponerVisible($("#clock"), false);
     ponerVisible($("#10"), false);
     anchura = $("#clock").width();
     lvl2Unlock=false;
     lvl3Unlock=false;
-    ponerVisible($("#interrogacion"), false);
-    ponerVisible($("#menuMinijuego"), false);
     lock = false;
     
     // BOTONES MENUS DEL JUEGO 
@@ -327,8 +319,8 @@ function load(scene){
     //console.log(obj.right);
     img = obj.img;
     left = obj.left;
-
-
+    $("#fader").fadeOut(400);
+    $("#fader").fadeIn(200);
     if(left=="null")
         {
         document.getElementById("bLeft").style.display = 'none';
@@ -391,7 +383,6 @@ function load(scene){
             }
             
         }
-
     
 }
 function prepregunta(){
@@ -600,8 +591,10 @@ function getHighScores(maze){
     var obj = JSON.parse(localStorage.getItem("highscores" + maze));
     var str = "";
     var i;
+    var index=1;
     for(i in obj){
-        str = str + i +  ") " + obj[i].name+ " - Tiempo -> " +obj[i].punt + "\n";
+        str = str + (index) +  ") " + obj[i].name+ " - Tiempo -> " +obj[i].punt + "\n";
+        index++;
     }
     console.log(str);
     $("#Highscore").val(str);
