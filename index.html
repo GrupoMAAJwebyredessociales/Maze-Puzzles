@@ -52,7 +52,6 @@
 			<br>
             <button class = "btnlvl boton1" id = "Blvl1" ></button>
 			<button class = "btnlvl boton2" id = "Blvl2"></button>
-            <button class = "btnlvl boton3" id = "Blvl3"></button>
 				
 		</div>
         <!--- MENU NIVEL -->
@@ -82,7 +81,9 @@
                 <!--- Derrota-->
         <div id="menuD" class="page" >
             <img src="assets/GameOver.png"          class = "victoria" id = "Derrota">
-            <img src="assets/BotonAtras.png"   class = "victoria" id = "backMenuD">
+            <!--<img src="assets/BotonAtras.png"   class = "boton victoria" id = "backMenuD">-->
+            <button class = "victoria boton" id = "backMenuD" ></button>
+
         </div>
 		 <!--- MENU PREGUNTA-->
 
@@ -131,18 +132,26 @@
             <img  src="assets/ok.png" class= "bOk" id="ok">
         </div> 
         <!--- MENU HIGHSCORE -->
+
         <div id="menuHighscore">
-            <img src="assets/Boton1.png"  id = "highscore1">
-            <img src="assets/Boton2.png"  id = "highscore2">
-            <img src="assets/Boton3.png"  id = "highscore3">
+
+            <div id="btnslvl">
+                <button id="highscore1" class="common highscore1"></button>
+                <button id="highscore2" class="common highscore2"></button>
+            </div>
+
             <img src="assets/Leaderboard.png" class="TablaLeaderBoard" id = "leaderboard">
             <textarea readonly cols = 45 id="Highscore"></textarea> 
-            <img src="assets/BotonAtras.png" id="backHighscores">
+
+
+                <button id="backHighscores" class="backHighscores"></button>
+
         </div> 
         <!--- MENU INSTRUCCIONES -->
+
 		<div id="menuInstrucciones" class="page" >
-            <img src="assets/BotonAtras.png" id = "BatrasIns" >
             <img src="assets/instrucciones.png" id="instrucciones">
+            <button class = "BatrasIns" id = "BatrasIns" ></button>
               
         </div>
         
@@ -150,34 +159,14 @@
         
         <!--- MENU CONTACTAR -->
 		<div id="menuContactar" class="page" >
+
+            <a href=" https://github.com/GrupoMAAJwebyredessociales/Maze-Puzzles"><img src="assets/github.jpg" width="128" height="128" /></a><br>
+            <a href=" https://www.instagram.com/miguel_gs_/"><img src="assets/instagram.png" width="128" height="128" "right"/></a><br>
+            <a href=" https://www.instagram.com/angeelbg/"><img src="assets/instagram.png" width="128" height="128" "right"/></a><br>
+            <a href=" https://www.instagram.com/juandsilvamora/"><img src="assets/instagram.png" width="128" height="128" "right"/></a><br>
+            <a href=" https://www.instagram.com/alvarobm61/"><img src="assets/instagram.png" width="128" height="128" "right" /></a><br>
             <button class = "botonAtras" id = "BatrasCon" ></button>
-             
-        <div>
-        <a href=" https://github.com/GrupoMAAJwebyredessociales/Maze-Puzzles"><img src="assets/github.jpg" width="128" height="128" align="left" />
 
-</a>
-        </div> 
-            
-            <div>
-        <a href=" https://www.instagram.com/miguel_gs_/"><img src="assets/instagram.png" width="128" height="128" "right"/>
-
-</a>
-        </div> 
-             <div>
-        <a href=" https://www.instagram.com/angeelbg/"><img src="assets/instagram.png" width="128" height="128" "right"/>
-
-</a>
-        </div>
-             <div>
-        <a href=" https://www.instagram.com/juandsilvamora/"><img src="assets/instagram.png" width="128" height="128" "right"/>
-
-</a>
-        </div>
-             <div>
-        <a href=" https://www.instagram.com/alvarobm61/"><img src="assets/instagram.png" width="128" height="128" "right" />
-
-</a>
-        </div>
 
         </div>
 
