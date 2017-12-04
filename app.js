@@ -51,11 +51,10 @@ $(function() {
                     isAdyacent(event.target.id.substring(1), getVacio());
             })
     }
-    $("#Bjugar").click(
+    $("#Bjugar").click( // funcionalidad de la pestaña jugar
 			function() {
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), true);
-                console.log("hola");
                 
 				})
     $("#Blvl1").click(
