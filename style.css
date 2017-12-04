@@ -154,7 +154,10 @@ span.crosshair {
 }
 
 .back{
+      background: transparent;
   background-image:url(assets/BotonAtras.png);
+    border: none;
+    background-repeat:no-repeat;
   z-index: 5;
   height: 100%;
   width: 100%;
@@ -162,7 +165,10 @@ span.crosshair {
 }
 
 .back:hover{
+      background: transparent;
   background-image:url(assets/BotonAtrasHover.png);
+    border: none;
+    background-repeat:no-repeat;
   z-index: 5;
   height: 100%;
   width: 100%;
