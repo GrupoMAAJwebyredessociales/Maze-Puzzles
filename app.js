@@ -51,11 +51,10 @@ $(function() {
                     isAdyacent(event.target.id.substring(1), getVacio());
             })
     }
-    $("#Bjugar").click(
+    $("#Bjugar").click( // funcionalidad de la pestaña jugar
 			function() {
                     ponerVisible($("#menu"), false);
                     ponerVisible($("#menuJugar"), true);
-                console.log("hola");
                 
 				})
     $("#Blvl1").click(
@@ -435,8 +434,8 @@ function check(ans){
         if(maze.scene[intscene].front!="null"){
             ponerVisible($("#bFront"), true);
         }
-        document.getElementById('sound2').animate({volume: 0.5}, 500);
-        document.getElementById('sound1').animate({volume: 0}, 500);
+        document.getElementById('sound2').play();
+        document.getElementById('sound1').pause();
         ponerVisible($("#botones"), true);
         console.log("assets/"+maze.scene[intscene].imgo);
         document.getElementById("background").src = "assets/"+maze.scene[intscene].imgo;
