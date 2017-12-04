@@ -704,8 +704,7 @@ span.crosshair {
 	font-size: 130%;
 
 }
-<<<<<<< HEAD
-=======
+
 .boton3 {
   background-image:url(assets/3Block.png);
   background-size: contain;
@@ -746,7 +745,6 @@ span.crosshair {
     width: 7%;
     z-index: 7;
 }
->>>>>>> 1df94760980cffe8652b1ff4b7359d0631658006
 #Highscore{
     
     position:absolute;
