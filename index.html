@@ -26,17 +26,9 @@
     <script>
         window.onload=function(){
             var aux = navigator.platform;
-            if(aux != "Win32"){
+            if(aux != "Win32")
                 alert("Recomendamos colocar el movil en horizontal!");
-                $(document).ready(function () {
-                    function reorient(e) {
-                        var portrait = (window.orientation % 180 == 0);
-                        $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
-                    }
-                     window.onorientationchange = reorient;
-                        window.setTimeout(reorient, 0);
-                    });
-        }}
+        }
     </script>
 
 
@@ -183,7 +175,7 @@
         <div class="container marketing page" id="menuContactar"><br><br><br><br><br><br><br>
 
         <div class="col-md-6 col-sm-6 col-xs-12 col-lg-6">            
-          <img class="img-thumbnail"src="assets/raw/Angel.jpg" class="img-thumbnail1" width="304" height="236"> 
+          <img class="img-thumbnail"src="assets/raw/Angel.jpeg" class="img-thumbnail1" width="304" height="236"> 
           <h2>Ángel Bachiller García</h2>
           <p>Correo: AngelBG96@gmail.com</p>
           <p>GitHub: <a href="https://github.com/AngeelBG">AngeelBG</a></p> 
@@ -210,6 +202,7 @@
           <p>GitHub: <a href="https://github.com/Juanixou">Juanixou</a></p> 
         </div>
     
+                    <button class = "botonAtras" id = "BatrasCon" ></button>
     </div>
 
 

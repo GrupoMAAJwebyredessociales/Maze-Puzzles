@@ -452,7 +452,7 @@ span.crosshair {
     height: auto;
     max-height:16%; 
     min-height:18%; 
-    width:  60%;
+    width:  45%;
     overflow:hidden;
 }
 
@@ -886,7 +886,7 @@ span.crosshair {
 }
 #menuContactar{
   text-align: unset;
-  font-color:white;
+  color:white;
 }
 
 /* Center align the text within the three columns below the carousel */
