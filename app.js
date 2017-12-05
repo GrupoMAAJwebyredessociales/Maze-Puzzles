@@ -22,6 +22,7 @@ var quest;
 
 
 
+
 // función que cambia de estado a bloqueado y viceversa
 function ponerVisible(div, visible) {
 	let	estado = visible ? "block" : "none"; // block para que se vea, o none

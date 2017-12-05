@@ -23,6 +23,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" href="assets/Nav.png">
 
+    <script>
+        window.onload=function(){
+            var aux = navigator.platform;
+            if(aux==="Win32")
+            lockedAllowed = window.screen.lockOrientation("landscape");
+        }
+    </script>
+
+
 	</head>
 	<body>
 		<!--- MENU PRINCIPAL -->
