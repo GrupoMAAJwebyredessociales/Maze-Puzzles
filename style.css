@@ -1,6 +1,6 @@
 body { 
   background-image:url(assets/Background.png); 
-  background-repeat:no-repeat; 
+  /*background-repeat:no-repeat;*/
   background-attachment:fixed; 
   background-position:center;
   background-size: cover;
@@ -883,4 +883,27 @@ span.crosshair {
     height: 90%;
     width: auto;
     transform: translate(-50%, -50%);
+}
+#menuContactar{
+  text-align: unset;
+  font-color:white;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
 }
