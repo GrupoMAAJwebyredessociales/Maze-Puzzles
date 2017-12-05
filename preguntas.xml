@@ -1,4 +1,4 @@
-<xml>
+﻿<xml>
     <mazepr>
       <qw >
             
@@ -40,7 +40,7 @@
             
             <pregunta>Cuál fue el primer videojuego de la historia?</pregunta>
             <a>Mario-Bros</a>
-            <b>Alex Kidd in the miracle world</b>
+            <b>Sonic</b>
             <c>Pong</c>
             <d>KHY</d>
             <correcta>c</correcta>
