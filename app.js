@@ -318,8 +318,8 @@ function load(scene){
     //console.log(obj.right);
     img = obj.img;
     left = obj.left;
-    $("#fader").fadeOut(400);
-    $("#fader").fadeIn(200);
+    $("#fader").fadeOut(10);
+    $("#fader").fadeIn(400);
     if(left=="null")
         {
         document.getElementById("bLeft").style.display = 'none';
