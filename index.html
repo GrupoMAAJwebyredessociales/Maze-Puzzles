@@ -27,6 +27,7 @@
         window.onload=function(){
             var aux = navigator.platform;
             if(aux != "Win32"){
+                alert("Recomendamos colocar el movil en horizontal!");
                 $(document).ready(function () {
                     function reorient(e) {
                         var portrait = (window.orientation % 180 == 0);
